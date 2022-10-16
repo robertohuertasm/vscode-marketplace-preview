@@ -34,6 +34,9 @@
     "format:check": "prettier --check .",
     "format": "prettier --write ."
   },
+  "dependencies": {
+    "markdown-it": "^8.4.2"
+  },
   "devDependencies": {
     "@types/glob": "^8.0.0",
     "@types/mocha": "^10.0.0",

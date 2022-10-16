@@ -1,0 +1,1580 @@
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: wf_segoe-ui, Helvetica Neue, Helvetica, Arial, Verdana;
+  color: rgba(0, 0, 0, 1);
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 1);
+  margin: 0;
+  padding: 0;
+}
+
+/* L0 header styles start*/
+.uxservices-header {
+  height: 34px;
+  background-color: black;
+}
+
+a.skip-main {
+  left: -999px;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+}
+
+a.skip-main:focus,
+a.skip-main:active {
+  color: #0078D4;
+  background-color: #FFFFFF;
+  position: absolute;
+  left: auto;
+  top: auto;
+  width: 122px;
+  height: 33px;
+  overflow: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 7px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Segoe UI';
+  line-height: 20px;
+  z-index: 999;
+}
+
+a.skip-main:hover {
+  color: #005BA1;
+  background-color: #F2F2F2;
+}
+
+.uxservices-header div.upperBandContent {
+  background-color: black;
+  color: white;
+  line-height: 17px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 1160px;
+  padding: 0px;
+}
+
+.uxservices-header div.upperBandContent .left {
+  padding: 5px 0 0 0;
+}
+
+.uxservices-header div.upperBandContent .left .vs-logo-header {
+  height: 31px;
+  padding-top: 5px;
+}
+
+.uxservices-header div.upperBandContent .left .marketplacetext-header {
+  vertical-align: 9px;
+  padding-top: 5px;
+}
+
+.uxservices-header div.upperBandContent .right {
+  display: inline-block;
+  position: relative;
+  background-color: black;
+  font-size: 11px;
+  padding-top: 10px;
+}
+
+.uxservices-header div.upperBandContent .right .signIn {
+  font-weight: 600;
+  float: left;
+}
+
+.uxservices-header .marketPlaceLogoLink {
+  white-space: pre;
+  font-size: 16px;
+  line-height: 16px;
+  vertical-align: -4px;
+  display: inline-block;
+  color: white;
+}
+
+.uxservices-header .marketPlaceLogoLink.vs-brand-icon {
+  width: 30px;
+  height: 30px;
+  background: url(https://cdn.vsassets.io/v/M211_20221010.8/_content/Header/ImageSprite.png) no-repeat -250px 0 !important;
+}
+
+.uxservices-header .right a {
+  font-family: wf_segoe-ui, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-size: inherit;
+}
+
+.uxservices-header div.upperBandContent .scarabLink {
+  margin-right: 0.23em;
+}
+
+#Fragment_SearchBox {
+  display: inline-block;
+  margin-left: 25px;
+  height: 13px;
+}
+
+#Fragment_SearchBox .header-search-button {
+  height: 20px;
+  width: 20px;
+  background: url(https://cdn.vsassets.io/v/M211_20221010.8/_content/Header/ImageSprite.png) no-repeat -195px 0 !important;
+  cursor: pointer;
+  border: none;
+  margin-left: 3px;
+  padding: 0px;
+}
+
+#Fragment_SearchBox .header-search-button:focus {
+  outline-color: rgb(77, 144, 254);
+  outline-style: auto;
+  outline-width: 5px;
+}
+
+#Fragment_SearchBox .header-search-textbox {
+  vertical-align: top;
+  background-color: #6a6a6a;
+  color: #ffffff;
+  padding-left: 2px;
+}
+
+
+/* l0 header ends*/
+
+.tab {
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  margin-bottom: 25px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: transparent;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px 16px;
+  font-size: 16px;
+  height: 40px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  color: #106ebe;
+}
+
+.tab button.selected {
+  color: #106ebe;
+  border-bottom: 2px solid #106ebe;
+}
+
+.tab button:focus,
+.tab button.selected:focus {
+  border-color: #000000;
+}
+
+/* Style the tab content */
+.tabcontent {
+  padding: 6px 12px;
+}
+
+.bowtie-icon,
+i.bowtie-icon {
+  font-family: "Bowtie";
+  font-size: 14px;
+  speak: none;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-align: center;
+  text-decoration: none;
+  line-height: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bowtie-icon:disabled,
+i.bowtie-icon:disabled {
+  opacity: 0.5;
+}
+
+.bowtie-brand-visualstudio::before {
+  content: "\E91D";
+}
+
+.bowtie-install::before {
+  content: "\E92C";
+}
+
+.bowtie-search::before {
+  content: "\E986";
+}
+
+.bowtie-navigate-external::before {
+  content: "\E9D0";
+}
+
+.bowtie-status-info::before {
+  content: "\EA08";
+}
+
+.bowtie-status-info {
+  color: rgba(0, 120, 212, 1);
+  color: var(--communication-background, rgba(0, 120, 212, 1));
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+a:not(.ms-Button) {
+  color: rgba(0, 120, 212, 1);
+  color: var(--communication-foreground, rgba(0, 120, 212, 1));
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:not(.ms-Button):hover {
+  color: rgba(0, 120, 212, 1);
+  color: var(--communication-foreground, rgba(0, 120, 212, 1));
+  text-decoration: underline;
+}
+
+a:not(.ms-Button):visited {
+  color: rgba(0, 120, 212, 1);
+  color: var(--communication-foreground, rgba(0, 120, 212, 1));
+}
+
+a:not(.ms-Button):active {
+  color: rgba(0, 120, 212, 1);
+  color: var(--communication-foreground, rgba(0, 120, 212, 1));
+}
+
+button {
+  font-family: "Segoe UI VSS (Regular)", "Segoe UI", "-apple-system", BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Ubuntu, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  height: 30px;
+  border: 1px solid;
+  border-color: rgba(200, 200, 200, 1);
+  border-color: rgba(var(--palette-neutral-20, 200, 200, 200), 1);
+  background-color: rgba(248, 248, 248, 1);
+  background-color: rgba(var(--palette-neutral-2, 248, 248, 248), 1);
+  color: rgba(51, 51, 51, 1);
+  color: rgba(var(--palette-neutral-80, 51, 51, 51), 1);
+  cursor: pointer;
+  outline: 0;
+  padding: 2px 12px 2px 12px;
+}
+
+button:hover:not(.ms-Button):not(.bolt-button):not(.link-as-button),
+button:focus:not(.ms-Button):not(.bolt-button):not(.link-as-button) {
+  border-color: rgba(166, 166, 166, 1);
+  border-color: rgba(var(--palette-neutral-30, 166, 166, 166), 1);
+  border-style: dotted;
+}
+
+.pricingTab-loader-container,
+.qnaTab-loader-container,
+.rnrTab-loader-container,
+.versionHistoryTab-loader-container {
+  text-align: center;
+}
+
+.pricingTab-loader-container .loader,
+.qnaTab-loader-container .loader,
+.rnrTab-loader-container .loader,
+.versionHistoryTab-loader-container .loader {
+  display: inline-block;
+}
+
+/* Styles for bread crumb */
+.bread-crumb-container {
+  font-size: 13px;
+  color: #FFFFFF;
+  height: 45px;
+  line-height: 45px;
+}
+
+.bread-crumb-container .member {
+  text-decoration: none;
+}
+
+.bread-crumb-container .separator {
+  padding: 0 5px;
+}
+
+.bread-crumb-container a:visited {
+  color: #FFFFFF;
+}
+
+.bread-crumb-container a {
+  color: #FFFFFF;
+}
+
+.bread-crumb-container a:hover {
+  color: #FFFFFF;
+}
+
+.item-details-control-root .breadcrumb {
+  background-color: #232323;
+  color: #FFFFFF;
+  height: 45px;
+  line-height: 45px;
+  font-size: 13px;
+  min-width: 1250px;
+}
+
+.item-details-control-root .breadcrumb .vsCodeDownloadLinkContainer {
+  float: right;
+  color: inherit;
+}
+
+.item-details-control-root .breadcrumb .vsCodeDownloadLink {
+  color: #0090ff;
+}
+
+/* end of bread crumb styles */
+
+/* Styles for item banner */
+.ux-section-banner {
+  padding: 16px 0px;
+  background-color: #eff1f3;
+  min-width: 1250px;
+}
+
+.item-details-control-root .ux-section-banner {
+  padding: 32px 0px;
+  background-color: #eff1f3;
+}
+
+.gallery-centered-content {
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.item-details-control-root .item-img {
+  text-align: center;
+  vertical-align: top;
+  width: 132px;
+}
+
+.item-details-control-root .item-img img {
+  max-width: 128px;
+  position: relative;
+  visibility: hidden;
+}
+
+.item-details-control-root .item-header .item-header-content {
+  font-size: 14px;
+  margin-left: 32px;
+}
+
+.item-details-control-root .ux-item-name {
+  font-size: 26px;
+  font-weight: 600;
+  display: inline-block;
+  padding-right: 8px;
+}
+
+.item-details-control-root .ux-item-second-row-wrapper {
+  margin-top: 4px;
+}
+
+.item-details-control-root .ux-item-second-row-wrapper>div {
+  display: inline-block;
+}
+
+.item-details-control-root .ux-item-second-row-wrapper>div:nth-child(1) {
+  margin-right: 10px;
+}
+
+.item-details-control-root .ux-item-second-row-wrapper>.ux-item-rating {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.item-details-control-root .ux-item-second-row-wrapper>.item-price-category {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.item-details-control-root .item-header h1,
+.item-details-control-root .item-header h2 {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  font-size: 0em;
+  font-weight: normal;
+}
+
+.item-details-control-root .item-header .dark {
+  color: #FFFFFF;
+}
+
+.item-details-control-root .ux-item-rating {
+  font-size: 14px;
+}
+
+.item-details-control-root .ux-item-publisher {
+  font-size: 18px;
+}
+
+.item-details-control-root .ux-item-publisher-link {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.item-details-control-root .ux-item-shortdesc {
+  margin: 20px 0;
+  width: 608px;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+.item-details-control-root .dark .item-banner-focussable-child-item:focus {
+  outline: 1px dotted white;
+}
+
+.item-details-control-root .item-header .item-header-content.light .installHelpInfo a {
+  color: #000000;
+  text-decoration: underline;
+  border-color: #000000;
+}
+
+.item-details-control-root .item-header .item-header-content.dark .installHelpInfo a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.ux-section-details-tabs .version-history-top-container {
+  width: 100%
+}
+
+/* not unpublished */
+
+.one-click-install-container {
+  display: flex;
+}
+
+.installHelpInfo {
+  margin-left: 10px;
+}
+
+.installHelpInfo>a {
+  vertical-align: sub;
+}
+
+.textContainer-41 {
+  flex-grow: 1;
+}
+
+.flexContainer-40 {
+  display: flex;
+  height: 100%;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.label-43 {
+  margin-top: 0px;
+  margin-right: 4px;
+  margin-bottom: 0px;
+  margin-left: 4px;
+  line-height: 100%;
+  font-weight: 600;
+}
+
+.item-details-control-root .ux-button.install {
+  position: relative;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  font-weight: 400;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: top;
+  padding-top: 0px;
+  padding-right: 16px;
+  padding-bottom: 0px;
+  padding-left: 16px;
+  min-width: 80px;
+  height: 32px;
+  background-color: rgb(244, 244, 244);
+  color: rgb(51, 51, 51);
+  user-select: none;
+  outline: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
+  text-decoration: none;
+  border-radius: 0px;
+}
+
+.item-details-control-root .item-header-content .install-button-container .ux-button.install.buttonDisabled {
+  background-color: #AAAAAA;
+  color: #EEEEEE;
+  opacity: 1;
+  border: 1px solid #E6E6E6;
+}
+
+.item-details-control-root .item-header-content .install-button-container .ux-button.install.buttonDisabled:hover {
+  cursor: default;
+  opacity: 1;
+}
+
+.item-details-control-root .dark .ux-button.install {
+  background-color: #107c10;
+  color: #FFFFFF;
+  min-width: 120px;
+  border: 1px solid #FFFFFF;
+}
+
+.item-details-control-root .dark .ux-button.install:hover {
+  background-color: #AAAAAA;
+  opacity: 0.6;
+}
+
+.item-details-control-root .light .ux-button.install {
+  background-color: #107c10;
+  color: #FFFFFF;
+  min-width: 120px;
+  border: 1px solid #666666;
+}
+
+.item-details-control-root .light .ux-button.install:hover,
+.item-details-control-root .light .ux-button.install:focus {
+  background-color: #074507;
+}
+
+.item-details-control-root .dark .ux-button.install:focus,
+.item-details-control-root .light .ux-button.install:focus {
+  border: 1px dotted;
+}
+
+
+/* End of item banner styles. */
+
+/* Styles for item details overview */
+.item-details-control-root .ux-section-details {
+  margin: 24px 0 34px 0px;
+  font-size: 13px;
+}
+
+.item-details-control-root .ux-section-details .itemdetails-section-header {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  padding-bottom: 16px;
+}
+
+.item-details-control-root .ux-section-details .ux-section-details-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.item-details-control-root .ux-itemdetails-left {
+  vertical-align: top;
+  font-size: 14px;
+  padding-right: 20px;
+}
+
+.item-details-control-root .ux-itemdetails-right {
+  width: 34.45%;
+  vertical-align: top;
+  padding: 0 0 0 20px;
+}
+
+.item-details-control-root .itemDetails-right {
+  display: block;
+}
+
+.item-details-control-root .markdown {
+  color: #333;
+  line-height: 1.6;
+  position: relative;
+}
+
+.item-details-control-root .markdown>*:first-child {
+  margin-top: 0 !important;
+}
+
+.item-details-control-root .markdown .link-header:target:before {
+  content: "";
+  display: block;
+  height: 250px;
+  margin: -250px 0 0;
+}
+
+.link-as-button {
+  height: initial;
+}
+
+.link-as-button:hover {
+  text-decoration: underline;
+}
+
+/* End of item details overview styles. */
+
+/* Styles for footer */
+#ux-footer {
+  line-height: 1.2em;
+}
+
+#ux-footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#ux-footer a {
+  color: #595958;
+}
+
+#ux-footer a:hover {
+  color: #3399ff;
+}
+
+#ux-footer ul.links {
+  padding: 0;
+  line-height: 1.2em;
+}
+
+#ux-footer .linkList>ul>li {
+  list-style-type: none;
+  background: none;
+  padding: 4px 0;
+  margin: 0;
+}
+
+#ux-footer #baseFooter {
+  width: 1160px;
+  padding: 15px 10px;
+  margin: 0 auto;
+}
+
+#ux-footer #baseFooter:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#ux-footer #baseFooter li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 15px 0 0;
+}
+
+#ux-footer #baseFooter #Fragment_BaseFooterLinks {
+  text-align: right;
+}
+
+#ux-footer #baseFooter #rightBaseFooter {
+  float: right;
+  width: 18%;
+  font-family: wf_segoe-ui, Tahoma, Helvetica, Sans-Serif;
+  color: #595958;
+  font-weight: bold;
+}
+
+#ux-footer span.microsoftLogo {
+  display: inline-block;
+  margin-left: 16px;
+}
+
+.microsoftLogo {
+  background: url(https://cdn.vsassets.io/v/M211_20221010.8/_content/Header/ImageSprite.png) no-repeat -93px 0 !important;
+}
+
+.microsoftLogo {
+  width: 70px;
+  height: 14px;
+  overflow: hidden;
+}
+
+/* End of footer styles. */
+
+/* Styles for markdown */
+.markdown img {
+  max-width: 100%;
+}
+
+.markdown h1,
+.markdown h2 {
+  line-height: 1.4;
+  margin-top: 1em;
+  margin-bottom: 16px;
+}
+
+.markdown h1 {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  border-bottom: 1px solid #eee;
+  margin-top: 2em;
+  padding-bottom: 10px;
+}
+
+.markdown h2 {
+  font-size: 1.375em;
+  line-height: 1.2em;
+  border-bottom: 1px solid #eee;
+  margin-top: 2em;
+  padding-bottom: 10px;
+}
+
+.markdown h3 {
+  font-size: 1.25em;
+}
+
+.markdown h4 {
+  font-size: 1.125em;
+}
+
+.markdown h5 {
+  font-size: 1.0em;
+}
+
+.markdown blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+  margin: 0;
+}
+
+.markdown pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  word-wrap: normal;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown code,
+.markdown tt {
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.04);
+  margin: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  border-radius: 3px;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+code {
+  color: #333;
+}
+
+.markdown pre>code {
+  background-color: inherit;
+}
+
+.markdown table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown table th {
+  font-weight: bold;
+}
+
+.markdown table th,
+.markdown table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* End of markdown styles. */
+
+.main-content.item-details-main-content {
+  min-height: 950px;
+}
+
+.item-details-main-content {
+  background-color: #FFFFFF;
+}
+
+.ms-Fabric {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: #333333;
+  font-family: "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+}
+
+.ms-Fabric button {
+  font-family: inherit;
+}
+
+.ux-section-details-tabs {
+  margin-top: -20px;
+}
+
+@font-face {
+  font-family: wf_segoe-ui;
+  src: url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.eot");
+  src: local("Segoe UI Light"), local("Segoe Light"), local("Segoe WP Light"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.eot?#iefix") format("embedded-opentype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff2") format("woff2"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+#survey-container {
+  position: relative;
+  background-color: #f5ebc5;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#survey-content-container {
+  margin: 0;
+  padding-left: 5%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 30%;
+  padding-right: 15%;
+}
+
+#survey-content-text {
+  color: #000000 !important;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0;
+  font-family: Segoe UI, SegoeUI, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+#survey-info-icon {
+  display: table-cell;
+  padding: 4px;
+  width: 24px;
+  height: 24px;
+  line-height: 0;
+  text-align: left;
+}
+
+@font-face {
+  font-family: wf_segoe-ui;
+  src: url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.eot");
+  src: local("Segoe UI Semilight"), local("Segoe Semilight"), local("Segoe WP Semilight"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.eot?#iefix") format("embedded-opentype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff2") format("woff2"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: wf_segoe-ui;
+  src: url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.eot");
+  src: local("Segoe UI"), local("Segoe"), local("Segoe WP"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.eot?#iefix") format("embedded-opentype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff2") format("woff2"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: wf_segoe-ui;
+  src: url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semibold/latest.eot");
+  src: local("Segoe UI Semibold"), local("Segoe Semibold"), local("Segoe WP Semibold"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semibold/latest.eot?#iefix") format("embedded-opentype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semibold/latest.woff2") format("woff2"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semibold/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semibold/latest.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: wf_segoe-ui;
+  src: url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semibold/latest.eot");
+  src: local("Segoe UI Semibold"), local("Segoe Semibold"), local("Segoe WP Semibold"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semibold/latest.eot?#iefix") format("embedded-opentype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semibold/latest.woff2") format("woff2"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semibold/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/Semibold/latest.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: wf_segoe-ui;
+  src: url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.eot");
+  src: local("Segoe UI Bold"), local("Segoe Bold"), local("Segoe WP Bold"), local("Segoe UI"), local("Segoe"), local("Segoe WP"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.eot?#iefix") format("embedded-opentype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.woff2") format("woff2"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: wf_segoe-ui_light;
+  src: url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.eot");
+  src: local("Segoe UI Light"), local("Segoe Light"), local("Segoe WP Light"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.eot?#iefix") format("embedded-opentype"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff2") format("woff2"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff") format("woff"), url("//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bowtie';
+  font-style: normal;
+  font-weight: normal;
+  src: url(https://cdn.vsassets.io/v/M211_20221010.8/_content/Fonts/Icons/bowtie.eot);
+  src: url(https://cdn.vsassets.io/v/M211_20221010.8/_content/Fonts/Icons/bowtie.eot?iefix) format("embedded-opentype"), url(https://cdn.vsassets.io/v/M211_20221010.8/_content/Fonts/Icons/bowtie.woff) format("woff"), url(https://cdn.vsassets.io/v/M211_20221010.8/_content/Fonts/Icons/bowtie.svg#bowtie) format("svg");
+}
+
+/*Sponsor start*/
+@font-face {
+  font-family: AzureDevOpsMDL2Assets;
+  src: url(https://cdn.vsassets.io/v/M211_20221010.8/_content/Fonts/Icons/AzDevMDL2.woff) format('woff');
+}
+
+.ux-item-sponsor-text {
+  background-color: #F1F1F1;
+  border: 1px solid #007ACC;
+  color: #000000;
+  padding: 5px 0px 5px 10px;
+}
+
+.ux-item-sponsor-heart-icon {
+  color: #B51E78;
+  padding: inherit;
+  padding-left: 6px;
+  font-weight: 600;
+  position: relative;
+  top: 3px;
+}
+
+.bowtie-heart-icon::before {
+  content: "\EB52";
+  font-family: AzureDevOpsMDL2Assets;
+}
+
+.bowtie-heart-icon {
+  color: rgba(0, 120, 212, 1);
+  color: var(--communication-background, rgba(0, 120, 212, 1));
+}
+
+.ux-sponsor-text-icon {
+  padding-left: 6px;
+  padding-right: 6px;
+  font-weight: 600
+}
+
+/*Sponsor style end*/
+
+/* Verified Domain style begin */
+
+/* Verified Domain style end */
+
+/* top pub. style begin */
+
+
+/* top pub. style end */
+
+/*rating review style begin*/
+.item-details-control-root .ux-item-review-rating .ux-item-rating-control .rating-control .star {
+  min-width: 16px;
+  min-height: 16px;
+  height: 12px;
+  width: 12px;
+  padding-top: 0px;
+  margin: 0px 2px;
+}
+
+.item-details-control-root .ux-item-second-row-wrapper .ux-item-review-rating-wrapper {
+  text-decoration: none;
+  color: inherit;
+  padding-top: 1px;
+  padding-bottom: 3px;
+}
+
+.item-details-control-root .ux-item-second-row-wrapper .ux-item-review-rating-wrapper .ux-item-review-rating {
+  display: inline-flex;
+}
+
+.item-details-control-root .ux-item-second-row-wrapper .ux-item-review-rating-wrapper .ux-item-review-rating .ux-item-rating-control {
+  margin-left: 10px;
+  top: 2px;
+  position: relative;
+}
+
+.item-details-control-root .ux-item-second-row-wrapper .ux-item-review-rating-wrapper .ux-item-review-rating .ux-item-rating-count {
+  margin-left: 5px;
+  font-size: 16px;
+  margin-top: -1px;
+  margin-right: 8px;
+}
+
+/*rating review style end*/
+/*Spinner*/
+.loader-container {
+  text-align: -webkit-center;
+  text-align: -mozkit-center;
+}
+
+.loader {
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: solid #808080;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 310px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0px 0;
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  right: 100%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.ms-Button-icon.bowtie-icon.bowtie-copy-to-clipboard.icon-64:before {
+  content: "\E8C8";
+  font-family: AzureDevOpsMDL2Assets;
+}
+
+
+/* hide the spinner and show the elements*/
+.loader-container {
+  display: none;
+}
+
+.item-details-control-root .itemDetails-right {
+  display: table-cell;
+}
+
+.bowtie-brand-github::before {
+  content: "\E916";
+}
+
+.bowtie-status-error::before {
+  content: "\EA02";
+}
+
+.bowtie-status-waiting-fill::before {
+  content: "\EA15";
+}
+
+.bowtie-tfvc-pull-request::before {
+  content: "\EA3A";
+}
+
+.bowtie-status-waiting-fill {
+  color: rgba(248, 168, 0, 1);
+  color: rgba(var(--palette-accent3, 248, 168, 0), 1);
+}
+
+.bowtie-status-error {
+  color: rgba(218, 10, 0, 1);
+  color: rgba(var(--palette-accent1, 218, 10, 0), 1);
+}
+
+.ms-Fabric .bowtie-status-waiting-fill {
+  color: rgba(248, 168, 0, 1);
+  color: rgba(var(--palette-accent3, 248, 168, 0), 1);
+}
+
+.ms-Fabric .bowtie-status-error {
+  color: rgba(218, 10, 0, 1);
+  color: rgba(var(--palette-accent1, 218, 10, 0), 1);
+}
+
+.item-details-control-root .item-share-container {
+  display: inline-block;
+  vertical-align: -4px;
+  margin: 20px -2px;
+}
+
+.item-details-control-root .item-share-container a:hover {
+  text-decoration: none;
+}
+
+.item-details-control-root .social-link {
+  height: 23px;
+  width: 23px;
+  margin: 0 2px;
+  display: inline-block;
+}
+
+.item-share-container a:focus {
+  outline: none;
+}
+
+@font-face {
+  font-family: AzureDevOpsMDL2Assets;
+  src: url('../../../_content/Fonts/Icons/AzDevMDL2.woff') format('woff');
+}
+
+.item-share-container a:focus .social-link {
+  outline: 1px dotted #666;
+}
+
+.item-details-control-root .ux-section-details .itemdetails-section-header.right {
+  padding: 0 0 5px 0;
+  margin: 0;
+}
+
+.item-details-control-root .ux-section-resources ul li {
+  margin-bottom: 4px;
+}
+
+.item-details-control-root .ux-section-other {
+  margin-top: 16px;
+}
+
+.item-details-control-root .ux-section-resources ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-details-control-root .ux-section-project-details {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.item-details-control-root .ux-section-project-details.hidden {
+  display: none;
+}
+
+.item-details-control-root .ux-section-resources {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.item-details-control-root .ux-section-project-details .itemdetails-section-header.right {
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.item-details-control-root .ux-section-project-details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 0 -3px;
+}
+
+.item-details-control-root .ux-section-project-details ul li {
+  margin-bottom: 4px;
+}
+
+.item-details-control-root .ux-section-project-details ul li .api-github-response.bowtie-icon {
+  color: rgba(0, 0, 0, 1);
+  color: rgba(var(--palette-neutral-100, 0, 0, 0), 1);
+}
+
+.api-github-response.bowtie-icon.bowtie-brand-github {
+  margin-left: 4px;
+  margin-top: 2px;
+  margin-right: 1px;
+}
+
+.item-details-control-root .ux-section-project-details span {
+  text-align: center;
+  vertical-align: top;
+  margin-left: 5px;
+}
+
+.item-details-control-root .ux-table-metadata table {
+  font-size: 12px;
+  color: #666;
+  padding: 0;
+  margin-top: 0px;
+  border-collapse: collapse;
+}
+
+.item-details-control-root .ux-table-metadata td {
+  padding: 4px 18px 4px 0;
+}
+
+.meta-data-list-container .ux-section-meta-data-list .meta-data-list {
+  margin-top: 3px;
+}
+
+.meta-data-list-container a.meta-data-list-link:hover,
+.meta-data-list-container a.meta-data-list-link:focus {
+  background-color: #0078d4;
+  border: 1px solid #0078d4;
+  color: white;
+  cursor: pointer;
+}
+
+.meta-data-list-container .ux-section-meta-data-list>div:nth-last-child(1) {
+  padding-bottom: 16px;
+}
+
+.meta-data-list-container .ux-section-meta-data-list a {
+  border: 1px solid #ddd;
+  padding: 4px 6px;
+  border-radius: 3px;
+  font-size: 13px;
+  color: #333;
+  margin: 0 6px 4px 0;
+  display: inline-block;
+}
+
+.meta-data-list-container .ux-section-meta-data-list a:hover {
+  text-decoration: none;
+}
+
+.meta-data-list-container .ux-section-header {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  padding-bottom: 16px;
+}
+
+.meta-data-list-container .ux-section-header.right {
+  padding: 0 0 5px 0;
+  margin: 0;
+}
+
+.ux-section-capabilities .ux-section-header {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  padding-bottom: 16px;
+}
+
+.ux-section-capabilities .ux-section-header.right {
+  padding: 0 0 5px 0;
+  margin: 0;
+}
+
+.ux-section-capabilities .capabilities-list-item,
+.vsix-id-text {
+  color: #666;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.vss-Icon.vss-Icon--bowtie {
+  font-family: "bowtie";
+}
+
+.vss-Icon {
+  font-style: normal;
+}
+
+.bowtie-status-info {
+  color: var(--communication-background, rgba(0, 120, 212, 1));
+}
+
+.item-details-control-root .ux-table-metadata .info-list-callout td {
+  padding: 0 5px 0 0;
+}
+
+.item-details-control-root .ux-table-metadata .info-list-callout .info-icon {
+  height: 15px;
+  width: 15px;
+  margin-top: 1px;
+  font-size: 12px;
+}
+
+.visibility-info:hover .visibility-help {
+  visibility: visible;
+}
+
+.visibility-info .visibility-help {
+  visibility: hidden;
+  width: 200px;
+  color: black;
+  background-color: #eff1f3;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+
+.qna-top-container,
+.gallery-dialog {
+  .ms-Button.ms-Button--default {
+
+    .ms-Button-label,
+    .ms-Button-icon {
+      height: initial;
+      line-height: initial;
+    }
+  }
+}
+
+.ms-Grid {
+  box-sizing: border-box;
+  *zoom: 1;
+  padding: 0 8px;
+}
+
+.ms-Grid::before,
+.ms-Grid::after {
+  display: table;
+  content: '';
+  line-height: 0;
+}
+
+.ms-Grid::after {
+  clear: both;
+}
+
+.ms-Grid-row {
+  margin: 0 -8px;
+  box-sizing: border-box;
+  *zoom: 1;
+}
+
+.ms-Grid-row::before,
+.ms-Grid-row::after {
+  display: table;
+  content: '';
+  line-height: 0;
+}
+
+.ms-Grid-row::after {
+  clear: both;
+}
+
+.ms-Grid-col {
+  position: relative;
+  min-height: 1px;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-sizing: border-box;
+}
+
+[dir='ltr'] .ms-Grid-col {
+  float: left;
+}
+
+[dir='rtl'] .ms-Grid-col {
+  float: right;
+}
+
+.ms-Grid-col .ms-Grid {
+  padding: 0;
+}
+
+// Small Screens
+.ms-sm12 {
+  width: 100%;
+}
+
+.ms-sm11 {
+  width: 91.66666666666666%;
+}
+
+.ms-sm10 {
+  width: 83.33333333333334%;
+}
+
+.ms-sm9 {
+  width: 75%;
+}
+
+.ms-sm8 {
+  width: 66.66666666666666%;
+}
+
+.ms-sm7 {
+  width: 58.333333333333336%;
+}
+
+.ms-sm6 {
+  width: 50%;
+}
+
+.ms-sm5 {
+  width: 41.66666666666667%;
+}
+
+.ms-sm4 {
+  width: 33.33333333333333%;
+}
+
+.ms-sm3 {
+  width: 25%;
+}
+
+.ms-sm2 {
+  width: 16.666666666666664%;
+}
+
+.ms-sm1 {
+  width: 8.333333333333332%;
+}
+
+.flexContainer-50 {
+  display: flex;
+  height: 100%;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.textContainer-51 {
+  flex-grow: 1;
+}
+
+.label-53 {
+  margin-top: 0px;
+  margin-right: 4px;
+  margin-bottom: 0px;
+  margin-left: 4px;
+  line-height: 100%;
+  font-weight: 600;
+}
+
+.bowtie-alert::before {
+  content: "\E935";
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.gallery-dialog .rating-control .ms-Rating-star {
+  margin-top: -5px;
+  padding-bottom: 5px;
+}
+
+.gallery-dialog .rating-control .review-container .ms-Rating-star {
+  margin-top: 0px;
+  padding-bottom: 0px;
+}
+
+.gallery-dialog .rating-control .ms-Rating-star button.ms-Rating-button {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.gallery-dialog .rating-control .ms-Rating-star button.ms-Rating-button:focus {
+  outline: 1px solid rgba(102, 102, 102, 1);
+  outline: 1px solid rgba(var(--palette-neutral-60, 102, 102, 102), 1);
+}
+
+.gallery-dialog .rating-control .ms-Rating-star button.ms-Rating-button .ms-RatingStar-front {
+  color: #C0442E;
+}
+
+.gallery-dialog .rating-control .ms-Rating-star button.ms-Rating-button .ms-RatingStar-back {
+  color: #D2D2D2;
+}
+
+@media screen and (-ms-high-contrast: active) {
+
+  .gallery-dialog .rating-control .ms-Rating-star button.ms-Rating-button:hover,
+  .gallery-dialog .rating-control .ms-Rating-star button.ms-Rating-button:focus {
+    border: 0 !important;
+  }
+
+  .gallery-dialog .rating-control .ms-Rating-star button.ms-Rating-button .ms-RatingStar-front {
+    color: #C0442E;
+  }
+
+  .gallery-dialog .rating-control .ms-Rating-star button.ms-Rating-button .ms-RatingStar-back {
+    color: #D2D2D2;
+  }
+}
+
+.gallery-dialog .review-container .rating-control .ms-Rating {
+  margin-top: 0px;
+  padding-bottom: 0px;
+}
+
+.reviews-row .ms-Grid-col.flag-table-container {
+  float: right;
+  padding-right: 6px;
+}
+
+.root-47 {
+  outline: transparent;
+  position: relative;
+  color: rgb(0, 120, 212);
+  background: none transparent;
+  border: none;
+  cursor: pointer;
+  display: inline;
+  font-size: inherit;
+  margin: 0px;
+  overflow: inherit;
+  padding: 0px;
+  text-align: left;
+  text-overflow: inherit;
+  user-select: text;
+}
