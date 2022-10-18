@@ -10,16 +10,29 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vscode-marketplace-preview.helloWorld"
+    "onStartupFinished",
+    "onCommand:vscode-marketplace-preview.preview"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "vscode-marketplace-preview.helloWorld",
-        "title": "Hello World"
+        "command": "vscode-marketplace-preview.preview",
+        "title": "Preview Manifest",
+        "category": "Marketplace",
+        "icon": "$(preview)",
+        "enablement": "resourceFilename == package.json"
       }
-    ]
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "vscode-marketplace-preview.preview",
+          "group": "navigation@1",
+          "when": "resourceFilename == package.json"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",

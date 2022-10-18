@@ -7,7 +7,7 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   let disposable = vscode.commands.registerCommand(
-    'vscode-marketplace-preview.helloWorld',
+    'vscode-marketplace-preview.preview',
     async () => {
       const outputChannel = vscode.window.createOutputChannel(
         'Marketplace Preview',
@@ -50,8 +50,8 @@ async function getReadmeAsHtml(
 
   const panel = vscode.window.createWebviewPanel(
     'preview',
-    'Preview',
-    vscode.ViewColumn.One,
+    'Manifest Preview',
+    vscode.ViewColumn.Two,
   );
   panel.webview.html = templateStr;
 
