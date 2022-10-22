@@ -83,6 +83,10 @@ export class ManifestData {
       .replace(/\${{nicePublisherName}}/g, nicePublisherName)
       .replace(/\${{backgroundColor}}/g, this.galleryBanner.color)
       .replace(/\${{theme}}/g, this.galleryBanner.theme)
+      .replace(
+        /\${{themeColor}}/g,
+        this.galleryBanner.theme === 'light' ? '#000' : '#fff',
+      )
       .replace(/\${{extensionIcon}}/g, this.imagePath)
       .replace(/\${{authorName}}/g, this.author.name)
       .replace(/\${{authorEmail}}/g, this.author.email)
