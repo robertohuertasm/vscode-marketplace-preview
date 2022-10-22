@@ -1,14 +1,57 @@
 {
   "name": "vscode-marketplace-preview",
   "displayName": "vscode-marketplace-preview",
-  "description": "Preview how the manifest of your extension will look in the Visual Studio",
-  "version": "0.0.1",
+  "description": "Preview how the manifest of your extension will look in the Visual Studio Marketplace",
+  "version": "1.0.0",
+  "publisher": "robertohuertasm",
+  "license": "MIT",
+  "author": {
+    "email": "roberto.huertas@outlook.com",
+    "name": "Roberto Huertas",
+    "url": "https://robertohuertas.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertohuertasm/vscode-marketplace-preview"
+  },
+  "bugs": {
+    "url": "https://github.com/robertohuertasm/vscode-marketplace-preview/issues",
+    "email": "roberto.huertas@outlook.com"
+  },
   "engines": {
     "vscode": "^1.72.0"
   },
+  "preview": true,
+  "capabilities": {
+    "virtualWorkspaces": true,
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "galleryBanner": {
+    "color": "#00558eff",
+    "theme": "dark"
+  },
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
   "categories": [
+    "Visualization",
     "Other"
   ],
+  "icon": "resources/logo.svg",
+  "keywords": [
+    "marketplace",
+    "manifest",
+    "preview",
+    "multi-root ready",
+    "portable mode ready"
+  ],
+  "homepage": "https://github.com/robertohuertasm/vscode-marketplace-preview",
+  "sponsor": {
+    "url": "https://robertohuertas.com/sponsorship/"
+  },
   "activationEvents": [
     "workspaceContains:package.json"
   ],
