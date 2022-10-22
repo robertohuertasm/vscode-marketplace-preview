@@ -3,3 +3,7 @@ out
 *.md
 package*.json
 coverage
+dist
+.prettierrc
+.vscode
+resources

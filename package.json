@@ -13,6 +13,7 @@
     "workspaceContains:package.json"
   ],
   "main": "./dist/extension.js",
+  "browser": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
@@ -27,7 +28,7 @@
       "editor/title": [
         {
           "command": "vscode-marketplace-preview.preview",
-          "group": "navigation@1",
+          "group": "navigation@0",
           "when": "resourceFilename == package.json"
         }
       ]
