@@ -23,6 +23,7 @@ export class ManifestData {
   public repository: string;
   public sponsor?: string;
   public isWeb: boolean;
+  public author: { name: string; email: string };
 
   constructor(
     data: Record<string, any>,
@@ -49,6 +50,10 @@ export class ManifestData {
     this.isWeb = !!data.browser;
     const onDiskPath = vscode.Uri.joinPath(root, data.icon);
     this.imagePath = webView.asWebviewUri(onDiskPath).toString();
+    this.author = {
+      name: data.author?.name || 'Roberto Huertas',
+      email: data.author?.email || 'roberto.huertas@outlook.com',
+    };
   }
 
   public async replace(template: string): Promise<string> {
@@ -79,6 +84,8 @@ export class ManifestData {
       .replace(/\${{backgroundColor}}/g, this.galleryBanner.color)
       .replace(/\${{theme}}/g, this.galleryBanner.theme)
       .replace(/\${{extensionIcon}}/g, this.imagePath)
+      .replace(/\${{authorName}}/g, this.author.name)
+      .replace(/\${{authorEmail}}/g, this.author.email)
       .replace(
         /\${{releaseDate}}/g,
         liveInfo?.releaseDate?.toLocaleString() || '6/1/2016, 2:23:28 AM',

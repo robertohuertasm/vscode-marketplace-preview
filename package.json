@@ -10,9 +10,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onStartupFinished",
-    "workspaceContains:package.json",
-    "onCommand:vscode-marketplace-preview.preview"
+    "workspaceContains:package.json"
   ],
   "main": "./dist/extension.js",
   "contributes": {
