@@ -2,24 +2,24 @@
 
 <head>
   <meta name="description"
-    content="Extension&#32;for&#32;Visual&#32;Studio&#32;Code&#32;-&#32;Icons&#32;for&#32;Visual&#32;Studio&#32;Code" />
+    content="Extension&#32;for&#32;Visual&#32;Studio&#32;Code&#32;-&#32;${{descriptionHTML}}" />
   <meta name="keywords"
     content="__sponsor_extension,__web_extension,icons,icon-theme,multi-root&#32;ready,portable&#32;mode&#32;ready,theme" />
-  <meta property="og:title" content="vscode-icons&#32;-&#32;Visual&#32;Studio&#32;Marketplace" />
+  <meta property="og:title" content="${{name}}&#32;-&#32;Visual&#32;Studio&#32;Marketplace" />
   <meta property="og:type" content="website" />
   <meta property="og:url"
-    content="https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons" />
+    content="https://marketplace.visualstudio.com/items?itemName=${{publisher}}.${{name}}" />
   <meta property="og:image"
-    content="https://vscode-icons-team.gallerycdn.vsassets.io/extensions/vscode-icons-team/vscode-icons/12.0.0/1665875808964/Microsoft.VisualStudio.Services.Icons.Default" />
+    content="https://${{publisher}}.gallerycdn.vsassets.io/extensions/${{publisher}}/${{name}}/${{version}}/1665875808964/Microsoft.VisualStudio.Services.Icons.Default" />
   <meta property="og:description"
-    content="Extension&#32;for&#32;Visual&#32;Studio&#32;Code&#32;-&#32;Icons&#32;for&#32;Visual&#32;Studio&#32;Code" />
+    content="Extension&#32;for&#32;Visual&#32;Studio&#32;Code&#32;-&#32;${{descriptionHTML}}" />
   <meta property="twitter:card" content="summary" />
   <meta property="twitter:site" content="@Code" />
-  <link rel="canonical" href="https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons" />
+  <link rel="canonical" href="https://marketplace.visualstudio.com/items?itemName=${{publisher}}.${{name}}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="{{cssPath}}" />
+  <link rel="stylesheet" type="text/css" href="${{cssPath}}" />
   <title>
-    vscode-icons - Visual Studio Marketplace
+    ${{displayName}} - Visual Studio Marketplace
   </title>
 </head>
 <body class="platform gallery gallery-page-item-details">
@@ -73,38 +73,39 @@
         <div class="breadcrumb">
           <div class="gallery-centered-content"><span class="bread-crumb-container"><a class="member"
                 href="/vscode">Visual Studio Code</a><span class="separator">&gt;</span><a class="member"
-                href="/search?sortBy=Installs&amp;category=Themes&amp;target=VSCode">Themes</a><span
-                class="separator">&gt;</span><span class="member">vscode-icons</span></span><span
+                href="/search?sortBy=Installs&amp;category=${{firstCategory}}&amp;target=VSCode">${{firstCategory}}</a><span
+                class="separator">&gt;</span><span class="member">${{displayName}}</span></span><span
               class="vsCodeDownloadLinkContainer"><span>New to Visual Studio Code?</span> <a class="vsCodeDownloadLink"
-                href="https://go.microsoft.com/fwlink?linkid=846418&amp;pub=vscode-icons-team&amp;ext=vscode-icons&amp;utm_source=vsmp&amp;utm_campaign=mpdetails"
+                href="https://go.microsoft.com/fwlink?linkid=846418&amp;pub=${{publisher}}&amp;ext=${{name}}&amp;utm_source=vsmp&amp;utm_campaign=mpdetails"
                 target="_blank" rel="noreferrer noopener nofollow" aria-label="Get Visual Studio Code Now">Get it
                 now.</a></span></div>
         </div>
         <div class="main-content item-details-main-content" id="vss_1">
           <div class="item-details-control-root">
             <div class="ux-item-details">
-              <div class="ux-section-banner" id="section-banner" style="background-color:#00558eff">
+              <div class="ux-section-banner" id="section-banner" style="background-color:${{backgroundColor}}">
                 <div class="ux-section-core gallery-centered-content">
                   <table role="presentation">
                     <tbody>
                       <tr>
                         <td class="item-img" id="vss_2"><img class="image-display" alt=""
-                            src="https://vscode-icons-team.gallerycdn.vsassets.io/extensions/vscode-icons-team/vscode-icons/12.0.0/1665875808964/Microsoft.VisualStudio.Services.Icons.Default"
+                            src="${{extensionIcon}}"
                             style="top:0.5px;visibility:visible" /></td>
                         <td class="item-header">
-                          <div class="item-header-content dark">
-                            <h1><span class="ux-item-name">vscode-icons</span></h1>
+                          <div class="item-header-content ${{theme}}">
+                            <h1><span class="ux-item-name">${{displayName}}</span></h1>
+                            ${{preview}}
+                            <span class="ux-item-preview "></span>
                             <div class="ux-item-second-row-wrapper">
                               <div class="ux-item-publisher">
                                 <h2 role="presentation"><a
                                     class="ux-item-publisher-link item-banner-focussable-child-item"
-                                    href="publishers/vscode-icons-team"
-                                    aria-label="More from VSCode Icons Team publisher" style="color:#ffffff">VSCode
-                                    Icons Team</a></h2>
-                              </div><span class="divider"> | </span>
+                                    href="publishers/${{publisher}}"
+                                    aria-label="More from ${{nicePublisherName}} publisher" style="color:#ffffff">${{nicePublisherName}}</a></h2>
+                              </div>${{verifiedDomain}}<span class="divider"> | </span>
                               <div class="ux-item-rating">
                                 <div class="bowtie-icon bowtie-install"></div><span class="installs-text"
-                                  title="The number of unique installations, not including updates."> 12,155,306
+                                  title="The number of unique installations, not including updates."> ${{installs}}
                                   installs</span>
                               </div><a id="review-details" href="#review-details" class="ux-item-review-rating-wrapper"
                                 aria-label="Average rating: 4.8 out of 5. Navigate to user reviews."><span
@@ -120,21 +121,17 @@
                                         src="https://cdn.vsassets.io/v/M211_20221010.8/_content/FullStarLight.svg" /><img
                                         class="star full-star" alt="" aria-label="5 star"
                                         src="https://cdn.vsassets.io/v/M211_20221010.8/_content/FullStarLight.svg" /></span></span><span
-                                    class="ux-item-rating-count"> (<span>418</span>)</span></span></a><span
+                                    class="ux-item-rating-count"> (<span>${{ratingCount}}</span>)</span></span></a><span
                                 class="divider"> | </span><span class="item-price-category">Free</span>
-                              <div><span class="divider"> | </span><a class="dark"
-                                  href="https://github.com/sponsors/vscode-icons" target="_blank"><span
-                                    class="ux-item-sponsor-heart-icon bowtie-icon bowtie-heart-icon "
-                                    style="color:#D61B8C"></span><span class="ux-sponsor-text-icon "
-                                    style="color:#ffffff">Sponsor</span></a></div>
+                             ${{sponsor}}
                             </div>
-                            <div class="ux-item-shortdesc">Icons for Visual Studio Code</div>
+                            <div class="ux-item-shortdesc">${{description}}</div>
                             <div class="ux-item-action">
                               <div class="installButtonContainer">
                                 <div class="one-click-install-container">
                                   <div>
                                     <div class="ms-Fabric"><span class="ux-oneclick-install-button-container"><a
-                                          href="vscode:extension/vscode-icons-team.vscode-icons"
+                                          href="vscode:extension/${{publisher}}.${{name}}"
                                           class="ms-Button ux-button install ms-Button--default root-39">
                                           <div class="ms-Button-flexContainer flexContainer-40">
                                             <div class="ms-Button-textContainer textContainer-41">
@@ -143,12 +140,12 @@
                                           </div>
                                         </a></span></div>
                                   </div><span class="installHelpInfo"><a href="https://aka.ms/vscode_extn_install"
-                                      target="_blank" rel="noreferrer noopener nofollow" class="dark">Trouble
+                                      target="_blank" rel="noreferrer noopener nofollow" class="${{theme}}">Trouble
                                       Installing?<i class="bowtie-icon bowtie-navigate-external"></i></a></span>
                                 </div>
                               </div>
                               <div style="display:none"><input type="text" id="FQN" readonly=""
-                                  value="vscode-icons-team.vscode-icons" /><input type="text" id="galleryUrl"
+                                  value="${{publisher}}.${{name}}" /><input type="text" id="galleryUrl"
                                   readonly="" value="/" /><input type="text" id="searchTarget" readonly=""
                                   value="VSCode" /></div>
                             </div>
@@ -176,7 +173,7 @@
                                   <td class="ux-itemdetails-left">
                                     <div class="itemDetails">
                                       <div class="markdown">
-<!-- MARKDOWN-INSERT-->
+${{markdown}}
                                       </div>
                                     </div>
                                   </td>
@@ -187,54 +184,33 @@
                                         <div class="meta-data-list-container">
                                           <div class="ux-section-meta-data-list">
                                             <h3 class="ux-section-header right">Categories</h3>
-                                            <div class="meta-data-list" role="group"><a class="meta-data-list-link"
-                                                href="/search?sortBy=Installs&amp;category=Themes&amp;target=VSCode"
-                                                target="_blank"
-                                                aria-label="Themes Category Click to search for more extensions having the Themes Category"
-                                                role="link">Themes</a></div>
+                                            <div class="meta-data-list" role="group">${{categories}}</div>
                                           </div>
                                           <div class="ux-section-meta-data-list">
                                             <h3 class="ux-section-header right">Tags</h3>
-                                            <div class="meta-data-list" role="group"><a class="meta-data-list-link"
-                                                href="/search?term=tag%3Aicons&amp;target=VSCode" target="_blank"
-                                                aria-label="icons Tag Click to search for more extensions having the icons Tag"
-                                                role="link">icons</a><a class="meta-data-list-link"
-                                                href="/search?term=tag%3Aicon-theme&amp;target=VSCode" target="_blank"
-                                                aria-label="icon-theme Tag Click to search for more extensions having the icon-theme Tag"
-                                                role="link">icon-theme</a><a class="meta-data-list-link"
-                                                href="/search?term=tag%3A%22multi-root%20ready%22&amp;target=VSCode"
-                                                target="_blank"
-                                                aria-label="multi-root ready Tag Click to search for more extensions having the multi-root ready Tag"
-                                                role="link">multi-root ready</a><a class="meta-data-list-link"
-                                                href="/search?term=tag%3A%22portable%20mode%20ready%22&amp;target=VSCode"
-                                                target="_blank"
-                                                aria-label="portable mode ready Tag Click to search for more extensions having the portable mode ready Tag"
-                                                role="link">portable mode ready</a><a class="meta-data-list-link"
-                                                href="/search?term=tag%3Atheme&amp;target=VSCode" target="_blank"
-                                                aria-label="theme Tag Click to search for more extensions having the theme Tag"
-                                                role="link">theme</a></div>
+                                            <div class="meta-data-list" role="group">${{tags}}</div>
                                           </div>
                                         </div>
                                       </div>
                                       <div class="ux-section-capabilities">
                                         <h3 class="ux-section-header right">Works with</h3>
-                                        <div class="capabilities-list-item">Universal, Web</div>
+                                        <div class="capabilities-list-item">Universal${{isWeb}}</div>
                                       </div>
                                       <div class="resources-async-div">
                                         <div class="ux-section-resources">
                                           <h3 class="itemdetails-section-header right">Resources</h3>
                                           <ul>
-                                            <li><a href="https://github.com/vscode-icons/vscode-icons/issues"
+                                            <li><a href="${{bugs}}"
                                                 target="_blank" rel="noreferrer noopener nofollow">Issues</a></li>
-                                            <li><a href="https://github.com/vscode-icons/vscode-icons.git"
+                                            <li><a href="${{repository}}"
                                                 target="_blank" rel="noreferrer noopener nofollow">Repository</a></li>
-                                            <li><a href="https://vscodeicons.team" target="_blank"
+                                            <li><a href="${{homepage}}" target="_blank"
                                                 rel="noreferrer noopener nofollow">Homepage</a></li>
                                             <li><a
-                                                href="https://marketplace.visualstudio.com/items/vscode-icons-team.vscode-icons/license"
+                                                href="https://marketplace.visualstudio.com/items/${{publisher}}.${{name}}/license"
                                                 target="_blank" rel="noreferrer noopener nofollow">License</a></li>
                                             <li><a
-                                                href="https://marketplace.visualstudio.com/items/vscode-icons-team.vscode-icons/changelog"
+                                                href="https://marketplace.visualstudio.com/items/${{publisher}}.${{name}}/changelog"
                                                 target="_blank" rel="noreferrer noopener nofollow">Changelog</a></li>
                                             <li><button role="button" aria-label="Download Extension"
                                                 class="ms-Link link-as-button undefined root-47"
@@ -247,26 +223,26 @@
                                         <div class="github-details">
                                           <ul class="githubLinks-container">
                                             <li id="repo-link-container"><a class="githubLinks repo-link"
-                                                href="https://github.com/vscode-icons/vscode-icons" target="blank"
+                                                href="${{repository}}" target="blank"
                                                 rel="noreferrer noopener nofollow"><span
                                                   class="api-github-response bowtie-icon bowtie-brand-github"></span><span
-                                                  class="api-github-response github-string">vscode-icons/vscode-icons</span></a>
+                                                  class="api-github-response github-string">${{rawRepository}}</span></a>
                                             </li>
                                             <li id="pull-request-link-container"><a
                                                 class="githubLinks pull-request-link"
-                                                href="https://github.com/vscode-icons/vscode-icons/pulls"
+                                                href="${{repository}}/pulls"
                                                 target="_blank" rel="noreferrer noopener nofollow"><span
                                                   class="api-github-response bowtie-icon bowtie-tfvc-pull-request"></span><span
                                                   class="api-github-response pull-request-string">7 Pull
                                                   Requests</span></a></li>
                                             <li id="last-commit-link-container"><a class="githubLinks last-commit-link"
-                                                href="https://github.com/vscode-icons/vscode-icons/commits"
+                                                href="${{repository}}/commits"
                                                 target="_blank" rel="noreferrer noopener nofollow"><span
                                                   class="api-github-response bowtie-icon bowtie-status-waiting-fill"></span><span
                                                   class="api-github-response last-commit-string">Last Commit: 24 minutes
                                                   ago</span></a></li>
                                             <li id="issues-link-container"><a class="githubLinks issues-link"
-                                                href="https://github.com/vscode-icons/vscode-icons/issues"
+                                                href="${{bugs}}"
                                                 target="_blank" rel="noreferrer noopener nofollow"><span
                                                   class="api-github-response bowtie-icon bowtie-status-error"></span><span
                                                   class="api-github-response open-issues-string">138 Open
@@ -281,12 +257,12 @@
                                             <tbody>
                                               <tr>
                                                 <td id="version">Version</td>
-                                                <td role="definition" aria-labelledby="version">12.0.0</td>
+                                                <td role="definition" aria-labelledby="version">${{version}}</td>
                                                 <td></td>
                                               </tr>
                                               <tr>
                                                 <td id="released-on">Released on</td>
-                                                <td role="definition" aria-labelledby="released-on">6/1/2016, 2:23:28 AM
+                                                <td role="definition" aria-labelledby="released-on">${{releaseDate}}
                                                 </td>
                                                 <td></td>
                                               </tr>
@@ -294,19 +270,19 @@
                                               <tr>
                                                 <td id="last-updated">Last updated</td>
                                                 <td role="definition" aria-labelledby="last-updated">
-                                                  <div class="extension-last-updated-date">10/16/2022, 1:19:18 AM</div>
+                                                  <div class="extension-last-updated-date">${{lastUpdatedDate}}</div>
                                                 </td>
                                                 <td></td>
                                               </tr>
                                               <tr>
                                                 <td id="publisher">Publisher</td>
-                                                <td role="definition" aria-labelledby="publisher">VSCode Icons Team</td>
+                                                <td role="definition" aria-labelledby="publisher">${{nicePublisherName}}</td>
                                                 <td></td>
                                               </tr>
                                               <tr>
                                                 <td id="unique-identifier">Unique Identifier</td>
                                                 <td role="definition" aria-labelledby="unique-identifier">
-                                                  vscode-icons-team.vscode-icons</td>
+                                                  ${{publisher}}.${{name}}</td>
                                                 <td></td>
                                               </tr>
                                               <tr> </tr>
@@ -314,7 +290,7 @@
                                                 <td id="report">Report</td>
                                                 <td role="definition" aria-labelledby="report"><a
                                                     rel="noreferrer noopener nofollow"
-                                                    href="mailto:vsmarketplace@microsoft.com?subject=Report%20abuse%20-%20vscode-icons-team.vscode-icons&amp;Body=https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons%0D%0A%3Cplease%20provide%20a%20brief%20description%20of%20the%20issue%3E">Report
+                                                    href="mailto:vsmarketplace@microsoft.com?subject=Report%20abuse%20-%20${{publisher}}.${{name}}&amp;Body=https://marketplace.visualstudio.com/items?itemName=${{publisher}}.${{name}}%0D%0A%3Cplease%20provide%20a%20brief%20description%20of%20the%20issue%3E">Report
                                                     Abuse</a></td>
                                                 <td></td>
                                               </tr>
@@ -322,15 +298,15 @@
                                           </table>
                                         </div> <span class="ux-social-icons">
                                           <div class="item-share-container"> <a
-                                              href="https://www.twitter.com/home?status=Just%20discovered%20this%20on%20the%20%23VSMarketplace%3A%20https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dvscode-icons-team.vscode-icons"
+                                              href="https://www.twitter.com/home?status=Just%20discovered%20this%20on%20the%20%23VSMarketplace%3A%20https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3D${{publisher}}.${{name}}"
                                               aria-label="share extension on twitter" target="_blank"> <img alt=""
                                                 src="https://cdn.vsassets.io/v/M211_20221010.8/_content/icon-social-twitter.svg"
                                                 class="social-link share-twitter-button"> </a> <a
-                                              href="https://www.facebook.com/sharer/sharer.php?u=https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons"
+                                              href="https://www.facebook.com/sharer/sharer.php?u=https://marketplace.visualstudio.com/items?itemName=${{publisher}}.${{name}}"
                                               aria-label="share extension on facebook" target="_blank"> <img alt=""
                                                 src="https://cdn.vsassets.io/v/M211_20221010.8/_content/icon-social-facebook.svg"
                                                 class="social-link share-facebook-button"> </a> <a
-                                              href="mailto:?subject=Check%20out%20-%20vscode-icons%20for%20Visual%20Studio%20Code&amp;Body=Hi%2C%20Just%20discovered%20this%20extension%20on%20the%20%23VSMarketplace%20that%20may%20be%20of%20interest%20to%20you.%20Check%20it%20out%20%40%20https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dvscode-icons-team.vscode-icons%20%21"
+                                              href="mailto:?subject=Check%20out%20-%20vscode-icons%20for%20Visual%20Studio%20Code&amp;Body=Hi%2C%20Just%20discovered%20this%20extension%20on%20the%20%23VSMarketplace%20that%20may%20be%20of%20interest%20to%20you.%20Check%20it%20out%20%40%20https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3D${{publisher}}.${{name}}%20%21"
                                               aria-label="share extension on email"> <img alt=""
                                                 src="https://cdn.vsassets.io/v/M211_20221010.8/_content/icon-social-email.svg"
                                                 class="social-link share-email-button"> </a> </div>

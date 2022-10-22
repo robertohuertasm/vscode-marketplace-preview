@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
-import * as MarkdownIt from 'markdown-it';
+import MarkdownIt from 'markdown-it';
+import { ManifestData } from './manifestData';
 
 export function activate(context: vscode.ExtensionContext) {
   console.log(
@@ -9,20 +10,14 @@ export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
     'vscode-marketplace-preview.preview',
     async () => {
-      const outputChannel = vscode.window.createOutputChannel(
-        'Marketplace Preview',
-      );
-      await getReadmeAsHtml(outputChannel, context);
+      await getReadmeAsHtml(context);
     },
   );
 
   context.subscriptions.push(disposable);
 }
 
-async function getReadmeAsHtml(
-  outputChannel: vscode.OutputChannel,
-  context: vscode.ExtensionContext,
-) {
+async function getReadmeAsHtml(context: vscode.ExtensionContext) {
   const fs = vscode.workspace.fs;
   const md = new MarkdownIt({ html: true, linkify: true });
   const root = vscode.workspace.workspaceFolders?.[0].uri;
@@ -30,6 +25,21 @@ async function getReadmeAsHtml(
   const readmeUri = vscode.Uri.joinPath(root!, 'README.md');
   const readme = await fs.readFile(readmeUri);
   const readmeStr = md.render(readme.toString());
+
+  const editor = vscode.window.activeTextEditor;
+  const data = editor?.document.getText();
+  // Check to ensure that manifest file is not empty
+  if (!data) {
+    return;
+  }
+
+  const panel = vscode.window.createWebviewPanel(
+    'preview',
+    'Manifest Preview',
+    vscode.ViewColumn.Two,
+  );
+
+  const manifest = new ManifestData(JSON.parse(data), root!, panel.webview);
 
   const cssPath = vscode.Uri.joinPath(
     context.extensionUri,
@@ -43,20 +53,11 @@ async function getReadmeAsHtml(
     'resources/template.html',
   );
   const template = await fs.readFile(templateUri);
-  const templateStr = template
-    .toString()
-    .replace('<!-- MARKDOWN-INSERT-->', readmeStr)
-    .replace('{{cssPath}}', cssPath);
+  const templateStr = (await manifest.replace(template.toString()))
+    .replace('${{markdown}}', readmeStr)
+    .replace('${{cssPath}}', cssPath);
 
-  const panel = vscode.window.createWebviewPanel(
-    'preview',
-    'Manifest Preview',
-    vscode.ViewColumn.Two,
-  );
   panel.webview.html = templateStr;
-
-  outputChannel.appendLine(readmeStr);
-  // outputChannel.show();
 }
 
 // This method is called when your extension is deactivated

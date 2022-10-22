@@ -994,7 +994,57 @@ code {
 
 /*Sponsor style end*/
 
-/* Verified Domain style begin */
+ /* Verified Domain style begin */
+        
+            
+ @font-face {
+  font-family: AzureDevOpsMDL2Assets;
+  src: url(https://cdn.vsassets.io/v/M211_20221010.8/_content/Fonts/Icons/AzDevMDL2.woff) format('woff');
+}
+
+.ux-marketplace-verified-doamin-icon {
+  vertical-align: bottom;
+  display: flex;
+  flex-direction: row;
+  margin-right: 6px;
+  line-height: 17px;
+}
+
+.ux-marketplace-verified-doamin-icon .verified-domain-icon {
+  font-size: 17px;
+  color: rgba(0, 120, 212, 1);
+  height: 18px;
+  margin-right: 20px;
+}
+
+.ux-marketplace-verified-doamin-icon .verified-domain-icon .verified-domain-icon-background {
+  color: #ffffff;
+  position: absolute;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font-family: AzureDevOpsMDL2Assets;
+  font-style: normal;
+  font-family: AzureDevOpsMDL2Assets;
+  font-style: normal;
+}
+
+.ux-marketplace-verified-doamin-icon .verified-domain-icon .verified-domain-icon-foreground {
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font-family: AzureDevOpsMDL2Assets;
+  font-style: normal;
+}
+
+.verified-domain-icon-foreground:before {
+  content: "\F6AD";
+}
+
+.verified-domain-icon-background:before {
+  content: "\F7BD";
+}
+
 
 /* Verified Domain style end */
 
