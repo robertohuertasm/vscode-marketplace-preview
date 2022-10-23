@@ -1,21 +1,27 @@
-# 1.0.0 (2022-10-22)
+# 1.0.0 (2022-10-23)
 
 
 ### Bug Fixes
 
+* **github:** ignore github workflows ([69842a8](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/69842a83d8a8adb97cc43bbc08e18c1cd0f8e1e3))
 * **prettier:** ignore some files and folders ([d6079c9](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/d6079c9cfb095b4db3913931f5fbb3e6bc7ef108))
+* **readme:** readme uri was not working in some cases ([74633bb](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/74633bb1d1c54c7131fbe4772491ede422f88991))
 * **theme:** publisher name changes according to the theme ([0c04375](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/0c04375ea45cabfe6b3bbc5b5f4aac89aa27d4d6))
+* **tsconfig:** skipLibCheck ([aaeacf6](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/aaeacf613a3b809d933ecf86aecf8fc1d068974b))
 
 
 ### Features
 
 * **changelog:** automate the changelog generation ([1a7dda1](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/1a7dda1dc47c1b90f46824b242219e2c858b1960))
+* **logo:** created cool logo for the extension ([e9778c3](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/e9778c37b7e9387c4e7bf80cd2652f765f55fdf7))
 * **manifest:** add features in package.json ([179699f](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/179699f652fb20fc2ee0f41755b6d20ff496fffa))
 * **manifest:** loads information from package json ([db98a58](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/db98a58baa2a04c5b0cd647dc522c3946b3590cf))
 * **menu:** add command to package.json ([5898ba4](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/5898ba49b80626941b3ce617792aeb92cba11552))
 * **readme:** get html from readme file ([8c6bba4](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/8c6bba443753406d4d65ffb79e1d22d789d327dc))
+* **root:** support non-root package.json files ([aa4b284](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/aa4b284f207cf46ce80effaa442e1f649761ecd4))
 * **template:** create initial template ([15f9d17](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/15f9d17bfeef7d90f6a4cef6e14a032a73326d46))
 * **watch:** react to readme and package.json changes ([91c1291](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/91c1291ca97fa372bf1dcd52f5fa36a2ea2151e0))
+* **web:** add web support ([f623cc3](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/f623cc3f6eb86211be5c5c04bcd8cd0322caa004))
 
 
 
