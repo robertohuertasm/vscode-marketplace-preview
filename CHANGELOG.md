@@ -1,3 +1,12 @@
+## [1.0.2](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.0.1...v1.0.2) (2022-10-23)
+
+
+### Bug Fixes
+
+* **banner:** banner color fails when ssr false ([2d964e1](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/2d964e1f34876061cb9ba0f7e3763f9132a128b0))
+
+
+
 ## [1.0.1](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.0.0...v1.0.1) (2022-10-23)
 
 
