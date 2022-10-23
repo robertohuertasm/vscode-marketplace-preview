@@ -6,7 +6,7 @@ env:
 on:
   push:
     tags:
-      - "v*.*.*"
+      - 'v*.*.*'
   workflow_dispatch:
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
       - name: Cloning repository
         uses: actions/checkout@v2
 
-      - name: "Setting up Node.js ${{ env.NODE_VERSION }}"
+      - name: 'Setting up Node.js ${{ env.NODE_VERSION }}'
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}

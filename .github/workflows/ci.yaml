@@ -14,18 +14,16 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [
-         ubuntu-latest
-        ]
+        os: [ubuntu-latest]
         node: [
-          'lts/*', # latest node
-        ]
+            'lts/*', # latest node
+          ]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Cloning repository
         uses: actions/checkout@v3
 
-      - name: "Setting up Node.js ${{ matrix.node }}"
+      - name: 'Setting up Node.js ${{ matrix.node }}'
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
@@ -45,4 +43,3 @@ jobs:
       #   # see https://code.visualstudio.com/api/working-with-extensions/continuous-integration#github-actions
       #   run: xvfb-run -a npm run test
       #   shell: bash
-
