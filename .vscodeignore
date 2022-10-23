@@ -16,3 +16,4 @@ vsc-extension-quickstart.md
 .prettierrc
 .prettierignore
 *.visx
+resources/images/**
