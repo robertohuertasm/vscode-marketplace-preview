@@ -12,5 +12,8 @@
   "typescript.tsc.autoDetect": "off",
   "[html]": {
     "editor.formatOnSave": false
-  }
+  },
+  "vsicons.associations.files": [
+    {"icon": "webpack", "extensions": ["webpack.web.config.js"], "filename": true, "format": "svg"},
+  ]
 }

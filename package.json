@@ -56,7 +56,7 @@
     "workspaceContains:package.json"
   ],
   "main": "./dist/extension.js",
-  "browser": "./dist/extension.js",
+  "browser": "./dist/extension_web.js",
   "contributes": {
     "commands": [
       {
@@ -82,19 +82,32 @@
     "changelog:first": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "vscode:prepublish": "npm run package",
     "compile": "webpack",
+    "compile:web": "webpack --config webpack.web.config.js",
     "watch": "webpack --watch",
-    "package": "webpack --mode production --devtool hidden-source-map",
+    "package": "npm run package:desktop && npm run package:web",
+    "package:desktop": "webpack --mode production --devtool hidden-source-map",
+    "package:web": "webpack --config webpack.web.config.js --mode production --devtool hidden-source-map",
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
     "format:check": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "serve": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. ."
   },
   "dependencies": {
+    "assert": "^2.0.0",
     "axios": "^1.1.3",
-    "markdown-it": "^8.4.2"
+    "browserify-zlib": "^0.2.0",
+    "https-browserify": "^1.0.0",
+    "markdown-it": "^8.4.2",
+    "process": "^0.11.10",
+    "punycode": "^2.1.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0",
+    "web-encoding": "^1.1.5"
   },
   "devDependencies": {
     "@types/glob": "^8.0.0",
@@ -105,6 +118,7 @@
     "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^5.38.1",
     "@vscode/test-electron": "^2.1.5",
+    "@vscode/test-web": "^0.0.31",
     "conventional-changelog-cli": "^2.2.2",
     "eslint": "^8.24.0",
     "glob": "^8.0.3",

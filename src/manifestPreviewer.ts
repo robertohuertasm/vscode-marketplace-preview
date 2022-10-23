@@ -1,4 +1,5 @@
 import MarkdownIt from 'markdown-it';
+import { TextDecoder } from 'web-encoding';
 import * as vscode from 'vscode';
 import { ManifestData } from './manifestData';
 
@@ -81,8 +82,11 @@ export class ManifestPreviewer extends vscode.Disposable {
       return;
     }
 
+    const decoder = new TextDecoder();
     const packageJson = await fs.readFile(packageJsonUri);
+    const packageJsonStr = decoder.decode(packageJson);
 
+    console.log(`packageJson: ${packageJsonStr}`);
     const panel =
       prevPanel ??
       vscode.window.createWebviewPanel(
@@ -92,13 +96,13 @@ export class ManifestPreviewer extends vscode.Disposable {
       );
 
     const manifest = new ManifestData(
-      JSON.parse(packageJson.toString()),
+      JSON.parse(packageJsonStr),
       root!,
       panel.webview,
     );
 
-    const cssPath = vscode.Uri.joinPath(extensionUri, 'resources/template.css')
-      .with({ scheme: 'vscode-resource' })
+    const cssPath = panel.webview
+      .asWebviewUri(vscode.Uri.joinPath(extensionUri, 'resources/template.css'))
       .toString();
 
     const templateUri = vscode.Uri.joinPath(
@@ -106,11 +110,12 @@ export class ManifestPreviewer extends vscode.Disposable {
       'resources/template.html',
     );
     const template = await fs.readFile(templateUri);
-    const templateStr = (await manifest.replace(template.toString()))
+    const templateStr = decoder.decode(template);
+    const finalTemplateStr = (await manifest.replace(templateStr))
       .replace('${{markdown}}', readmeStr)
       .replace('${{cssPath}}', cssPath);
 
-    panel.webview.html = templateStr;
+    panel.webview.html = finalTemplateStr;
     return panel;
   }
 
@@ -118,10 +123,14 @@ export class ManifestPreviewer extends vscode.Disposable {
     try {
       const fs = vscode.workspace.fs;
       const readme = await fs.readFile(readmeUri);
+      const decoder = new TextDecoder();
+      const decodedStr = decoder.decode(readme);
       const md = new MarkdownIt({ html: true, linkify: true });
-      const readmeStr = md.render(readme.toString());
+      const readmeStr = md.render(decodedStr);
+      console.log(`readmeStr: ${readmeStr}`);
       return readmeStr;
-    } catch {
+    } catch (e) {
+      console.warn(e);
       return undefined;
     }
   }
