@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.0.0...v1.0.1) (2022-10-23)
+
+
+### Features
+
+* **preview:** preview tag support ([78060e4](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/78060e466f0d64b4893cd497bbe9c94c80cfb707))
+
+
+
 # 1.0.0 (2022-10-23)
 
 
