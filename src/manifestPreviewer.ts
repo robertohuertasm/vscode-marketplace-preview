@@ -11,12 +11,30 @@ export class ManifestPreviewer extends vscode.Disposable {
     super(() => this.subscriptions.forEach(d => d.dispose()));
 
     const root = vscode.workspace.workspaceFolders?.[0].uri!;
-    const readmeUri = vscode.Uri.joinPath(root, 'README.md');
-    const packageJsonUri = vscode.Uri.joinPath(root, 'package.json');
+    const defaultReadmeUri = vscode.Uri.joinPath(root, 'README.md');
+    const defaultPackageJsonUri = vscode.Uri.joinPath(root, 'package.json');
+
+    // The command is always going to be launched when a package.json file is opened,
+    // so for us to support any package.json file, regardless of the position in the workspace,
+    // we can leverage the active text editor to get the package.json file uri.
+    // The convention for README.md is that it should be in same folder as package.json
 
     const command = vscode.commands.registerCommand(
       'vscode-marketplace-preview.preview',
       async () => {
+        // we'll use the default package.json and README.md if the active text editor is not a package.json file
+        // that should not ever happen... but just in case.
+        let readmeUri = defaultReadmeUri;
+        let packageJsonUri = defaultPackageJsonUri;
+
+        const editor = vscode.window.activeTextEditor;
+        if (editor) {
+          packageJsonUri = editor.document.uri;
+          readmeUri = vscode.Uri.file(
+            packageJsonUri.fsPath.replace('package.json', 'README.md'),
+          );
+        }
+
         const panel = await this.preview(
           root,
           context.extensionUri,
@@ -77,7 +95,7 @@ export class ManifestPreviewer extends vscode.Disposable {
     const readmeStr = await this.getReadme(readmeUri);
     if (!readmeStr) {
       vscode.window.showErrorMessage(
-        `The manifest cannot be previewed without a README.md file. Create a README.md file in the root of your project.`,
+        `The manifest cannot be previewed without a README.md file. Create a README.md file next to your package.json file on your project.`,
       );
       return;
     }
@@ -86,7 +104,6 @@ export class ManifestPreviewer extends vscode.Disposable {
     const packageJson = await fs.readFile(packageJsonUri);
     const packageJsonStr = decoder.decode(packageJson);
 
-    console.log(`packageJson: ${packageJsonStr}`);
     const panel =
       prevPanel ??
       vscode.window.createWebviewPanel(
@@ -127,7 +144,6 @@ export class ManifestPreviewer extends vscode.Disposable {
       const decodedStr = decoder.decode(readme);
       const md = new MarkdownIt({ html: true, linkify: true });
       const readmeStr = md.render(decodedStr);
-      console.log(`readmeStr: ${readmeStr}`);
       return readmeStr;
     } catch (e) {
       console.warn(e);

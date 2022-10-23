@@ -46,11 +46,4 @@ If you press it, you'll see that a new preview panel opens showing you a preview
 
 ## Preview your changes
 
-Once you have the `Preview Panel` opened, you'll be able to modify both your `package.json` and `README.md` files.
-
-## Current limitations
-
-The extension works both in the desktop and in the web but it has some limitations:
-
-- It only works with `package.json` and `README.md` files placed in the root of your folder.
-- You have to be sure that your `README.md` file is properly capitalized.
+Once you have the `Preview Panel` opened, you'll be able to modify both your `package.json` and `README.md` files. The changes will be updated in the `Preview Panel` every time you save the changes.
