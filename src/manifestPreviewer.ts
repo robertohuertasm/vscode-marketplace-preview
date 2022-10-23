@@ -30,8 +30,8 @@ export class ManifestPreviewer extends vscode.Disposable {
         const editor = vscode.window.activeTextEditor;
         if (editor) {
           packageJsonUri = editor.document.uri;
-          readmeUri = vscode.Uri.file(
-            packageJsonUri.fsPath.replace('package.json', 'README.md'),
+          readmeUri = vscode.Uri.parse(
+            packageJsonUri.toString().replace('package.json', 'README.md'),
           );
         }
 
