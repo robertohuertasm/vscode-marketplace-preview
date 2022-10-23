@@ -439,7 +439,6 @@ table {
 .item-details-control-root .ux-item-rating {
   font-size: 14px;
 }
-
 .item-details-control-root .ux-item-publisher {
   font-size: 18px;
 }
@@ -461,9 +460,9 @@ table {
 }
 
 .item-details-control-root .item-header .item-header-content.light .installHelpInfo a {
-  color: #000000;
-  text-decoration: underline;
-  border-color: #000000;
+    color: #000000;
+    text-decoration: underline;
+    border-color: #000000;
 }
 
 .item-details-control-root .item-header .item-header-content.dark .installHelpInfo a {
@@ -472,114 +471,137 @@ table {
 }
 
 .ux-section-details-tabs .version-history-top-container {
-  width: 100%
+    width: 100%
 }
 
 /* not unpublished */
 
-.one-click-install-container {
-  display: flex;
-}
+    .one-click-install-container {
+        display: flex;
+    }
 
-.installHelpInfo {
-  margin-left: 10px;
-}
+    .installHelpInfo {
+        margin-left: 10px;
+    }
 
-.installHelpInfo>a {
-  vertical-align: sub;
-}
+    .installHelpInfo>a {
+        vertical-align: sub;
+    }
 
-.textContainer-41 {
-  flex-grow: 1;
-}
+    .textContainer-41 {
+        flex-grow: 1;
+    }
 
-.flexContainer-40 {
-  display: flex;
-  height: 100%;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
+    .flexContainer-40 {
+        display: flex;
+        height: 100%;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
 
-.label-43 {
-  margin-top: 0px;
-  margin-right: 4px;
-  margin-bottom: 0px;
-  margin-left: 4px;
-  line-height: 100%;
-  font-weight: 600;
-}
+    .label-43 {
+        margin-top: 0px;
+        margin-right: 4px;
+        margin-bottom: 0px;
+        margin-left: 4px;
+        line-height: 100%;
+        font-weight: 600;
+    }
 
-.item-details-control-root .ux-button.install {
-  position: relative;
-  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  font-size: 14px;
-  font-weight: 400;
-  box-sizing: border-box;
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
-  vertical-align: top;
-  padding-top: 0px;
-  padding-right: 16px;
-  padding-bottom: 0px;
-  padding-left: 16px;
-  min-width: 80px;
-  height: 32px;
-  background-color: rgb(244, 244, 244);
-  color: rgb(51, 51, 51);
-  user-select: none;
-  outline: transparent;
-  border-width: 1px;
-  border-style: solid;
-  border-color: transparent;
-  border-image: initial;
-  text-decoration: none;
-  border-radius: 0px;
-}
+    .item-details-control-root .ux-button.install {
+        position: relative;
+        font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        font-weight: 400;
+        box-sizing: border-box;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        vertical-align: top;
+        padding-top: 0px;
+        padding-right: 16px;
+        padding-bottom: 0px;
+        padding-left: 16px;
+        min-width: 80px;
+        height: 32px;
+        background-color: rgb(244, 244, 244);
+        color: rgb(51, 51, 51);
+        user-select: none;
+        outline: transparent;
+        border-width: 1px;
+        border-style: solid;
+        border-color: transparent;
+        border-image: initial;
+        text-decoration: none;
+        border-radius: 0px;
+    }
 
-.item-details-control-root .item-header-content .install-button-container .ux-button.install.buttonDisabled {
-  background-color: #AAAAAA;
-  color: #EEEEEE;
-  opacity: 1;
-  border: 1px solid #E6E6E6;
-}
+    .item-details-control-root .item-header-content .install-button-container .ux-button.install.buttonDisabled {
+        background-color: #AAAAAA;
+        color: #EEEEEE;
+        opacity: 1;
+        border: 1px solid #E6E6E6;
+    }
 
-.item-details-control-root .item-header-content .install-button-container .ux-button.install.buttonDisabled:hover {
-  cursor: default;
-  opacity: 1;
-}
+    .item-details-control-root .item-header-content .install-button-container .ux-button.install.buttonDisabled:hover {
+        cursor: default;
+        opacity: 1;
+    }
 
-.item-details-control-root .dark .ux-button.install {
-  background-color: #107c10;
-  color: #FFFFFF;
-  min-width: 120px;
-  border: 1px solid #FFFFFF;
-}
+    .item-details-control-root .dark .ux-button.install {
+        background-color: #107c10;
+        color: #FFFFFF;
+        min-width: 120px;
+        border: 1px solid #FFFFFF;
+    }
 
-.item-details-control-root .dark .ux-button.install:hover {
-  background-color: #AAAAAA;
-  opacity: 0.6;
-}
+    .item-details-control-root .dark .ux-button.install:hover {
+        background-color: #AAAAAA;
+        opacity: 0.6;
+    }
 
-.item-details-control-root .light .ux-button.install {
-  background-color: #107c10;
-  color: #FFFFFF;
-  min-width: 120px;
-  border: 1px solid #666666;
-}
+    .item-details-control-root .light .ux-button.install {
+        background-color: #107c10;
+        color: #FFFFFF;
+        min-width: 120px;
+        border: 1px solid #666666;
+    }
 
-.item-details-control-root .light .ux-button.install:hover,
-.item-details-control-root .light .ux-button.install:focus {
-  background-color: #074507;
-}
+    .item-details-control-root .light .ux-button.install:hover,
+    .item-details-control-root .light .ux-button.install:focus {
+        background-color: #074507;
+    }
 
-.item-details-control-root .dark .ux-button.install:focus,
-.item-details-control-root .light .ux-button.install:focus {
-  border: 1px dotted;
-}
+    .item-details-control-root .dark .ux-button.install:focus,
+    .item-details-control-root .light .ux-button.install:focus {
+        border: 1px dotted;
+    }
 
+
+    .ux-item-titleTag {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-right: 10px;
+        padding-left: 8px;
+        padding-bottom: 2px;
+        border-radius: 2px;
+        font-style: italic;
+        font-size: 12px;
+        font-weight: 500;
+        vertical-align: top;
+    }
+
+    .item-details-control-root .item-header .ux-item-titleTag.light {
+        background-color: #D63F26;
+        color: #FFFFFF;
+    }
+
+    .item-details-control-root .item-header .ux-item-titleTag.dark {
+        background-color: #FF8E00;
+        color: #000000;
+    }
 
 /* End of item banner styles. */
 

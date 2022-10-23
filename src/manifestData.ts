@@ -48,7 +48,7 @@ export class ManifestData {
     this.preview = data.preview || '';
     this.sponsor = data.sponsor?.url;
     this.isWeb = !!data.browser;
-    const onDiskPath = vscode.Uri.joinPath(root, data.icon);
+    const onDiskPath = vscode.Uri.joinPath(root, data.icon || '');
     this.imagePath = webView.asWebviewUri(onDiskPath).toString();
     this.author = {
       name: data.author?.name || 'Roberto Huertas',
@@ -162,7 +162,7 @@ export class ManifestData {
     if (!this.preview) {
       return '';
     }
-    return `<span class="ux-item-preview ux-section-banner-custom-bg">Preview</span>`;
+    return `<span class="ux-item-titleTag dark">Preview</span>`;
   }
 
   private getSponsor(): string {
