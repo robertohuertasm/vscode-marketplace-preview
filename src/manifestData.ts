@@ -24,6 +24,7 @@ export class ManifestData {
   public sponsor?: string;
   public isWeb: boolean;
   public author: { name: string; email: string };
+  public pricing: string;
 
   constructor(
     data: Record<string, any>,
@@ -54,6 +55,7 @@ export class ManifestData {
       name: data.author?.name || 'Roberto Huertas',
       email: data.author?.email || 'roberto.huertas@outlook.com',
     };
+    this.pricing = data.pricing === 'Trial' ? 'Free Trial' : 'Free';
   }
 
   public async replace(template: string): Promise<string> {
@@ -67,6 +69,7 @@ export class ManifestData {
       .replace(/\${{displayName}}/g, this.displayName)
       .replace(/\${{publisher}}/g, this.publisher)
       .replace(/\${{description}}/g, this.description)
+      .replace(/\${{pricing}}/g, this.pricing)
       .replace(
         /\${{descriptionHTML}}/g,
         this.description.replace(/\S/g, '#32;'),
