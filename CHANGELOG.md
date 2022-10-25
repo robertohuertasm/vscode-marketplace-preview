@@ -1,3 +1,17 @@
+# [1.1.0](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.0.2...v1.1.0) (2022-10-25)
+
+
+### Bug Fixes
+
+* **icon:** show icon even in nested folders ([#3](https://github.com/robertohuertasm/vscode-marketplace-preview/issues/3)) ([c612e8e](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/c612e8e836a7998ce7b9a998b88b80ad46b65dce))
+
+
+### Features
+
+* **pricing:** support for pricing tag ([#1](https://github.com/robertohuertasm/vscode-marketplace-preview/issues/1)) ([9d82aca](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/9d82aca636e626843495cfce20d0a8d99b138c4d))
+
+
+
 ## [1.0.2](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.0.1...v1.0.2) (2022-10-23)
 
 
