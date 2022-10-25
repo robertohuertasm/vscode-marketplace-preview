@@ -28,7 +28,7 @@ export class ManifestData {
 
   constructor(
     data: Record<string, any>,
-    root: vscode.Uri,
+    packageJsonUri: vscode.Uri,
     webView: vscode.Webview,
   ) {
     this.name = data.name || '';
@@ -49,7 +49,9 @@ export class ManifestData {
     this.preview = data.preview || '';
     this.sponsor = data.sponsor?.url;
     this.isWeb = !!data.browser;
-    const onDiskPath = vscode.Uri.joinPath(root, data.icon || '');
+    const onDiskPath = vscode.Uri.parse(
+      packageJsonUri.toString().replace('package.json', data.icon || ''),
+    );
     this.imagePath = webView.asWebviewUri(onDiskPath).toString();
     this.author = {
       name: data.author?.name || 'Roberto Huertas',

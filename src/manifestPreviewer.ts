@@ -36,7 +36,6 @@ export class ManifestPreviewer extends vscode.Disposable {
         }
 
         const panel = await this.preview(
-          root,
           context.extensionUri,
           readmeUri,
           packageJsonUri,
@@ -59,7 +58,6 @@ export class ManifestPreviewer extends vscode.Disposable {
 
           const watcherHandler = async () => {
             await this.preview(
-              root,
               context.extensionUri,
               readmeUri,
               packageJsonUri,
@@ -85,7 +83,6 @@ export class ManifestPreviewer extends vscode.Disposable {
   }
 
   private async preview(
-    root: vscode.Uri,
     extensionUri: vscode.Uri,
     readmeUri: vscode.Uri,
     packageJsonUri: vscode.Uri,
@@ -114,7 +111,7 @@ export class ManifestPreviewer extends vscode.Disposable {
 
     const manifest = new ManifestData(
       JSON.parse(packageJsonStr),
-      root!,
+      packageJsonUri,
       panel.webview,
     );
 
