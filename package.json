@@ -64,7 +64,7 @@
         "title": "Preview Manifest",
         "category": "Marketplace",
         "icon": "$(preview)",
-        "enablement": "resourceFilename == package.json"
+        "enablement": "resourceFilename == package.json && marketplacePreview.isVSCodePackageJson"
       }
     ],
     "menus": {
@@ -72,7 +72,7 @@
         {
           "command": "vscode-marketplace-preview.preview",
           "group": "navigation@0",
-          "when": "resourceFilename == package.json"
+          "when": "resourceFilename == package.json && marketplacePreview.isVSCodePackageJson"
         }
       ]
     }
