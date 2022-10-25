@@ -55,7 +55,7 @@ export class ManifestData {
       name: data.author?.name || 'Roberto Huertas',
       email: data.author?.email || 'roberto.huertas@outlook.com',
     };
-    this.pricing = data.pricing === 'Trial' ? 'FREE TRIAL' : 'FREE';
+    this.pricing = data.pricing === 'Trial' ? 'Free Trial' : 'Free';
   }
 
   public async replace(template: string): Promise<string> {
