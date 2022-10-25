@@ -19,7 +19,7 @@ export class ManifestPreviewer extends vscode.Disposable {
     // we can leverage the active text editor to get the package.json file uri.
     // The convention for README.md is that it should be in same folder as package.json
 
-    const command = vscode.commands.registerCommand(
+    const previewCommandSubs = vscode.commands.registerCommand(
       'vscode-marketplace-preview.preview',
       async () => {
         // we'll use the default package.json and README.md if the active text editor is not a package.json file
@@ -79,7 +79,41 @@ export class ManifestPreviewer extends vscode.Disposable {
       },
     );
 
-    this.subscriptions.push(command);
+    const activeEditorSubs = vscode.window.onDidChangeActiveTextEditor(
+      editor => {
+        const document = editor?.document;
+        if (!document?.fileName.endsWith('package.json')) {
+          return;
+        }
+        const isVSCodePackageJson = this.isVSCodePackageJson(document);
+        vscode.commands.executeCommand(
+          'setContext',
+          'marketplacePreview.isVSCodePackageJson',
+          isVSCodePackageJson,
+        );
+      },
+    );
+
+    this.subscriptions.push(previewCommandSubs, activeEditorSubs);
+  }
+
+  private isVSCodePackageJson(document: vscode.TextDocument): boolean {
+    const packageJson = JSON.parse(document.getText()) as {
+      engines?: { vscode?: string };
+    };
+    return !!packageJson.engines?.vscode;
+  }
+
+  private async readJsonFile(uri: vscode.Uri): Promise<Record<string, any>> {
+    const str = await this.fileAsString(uri);
+    return JSON.parse(str);
+  }
+
+  private async fileAsString(uri: vscode.Uri): Promise<string> {
+    const fs = vscode.workspace.fs;
+    const decoder = new TextDecoder();
+    const str = await fs.readFile(uri);
+    return decoder.decode(str);
   }
 
   private async preview(
@@ -97,10 +131,6 @@ export class ManifestPreviewer extends vscode.Disposable {
       return;
     }
 
-    const decoder = new TextDecoder();
-    const packageJson = await fs.readFile(packageJsonUri);
-    const packageJsonStr = decoder.decode(packageJson);
-
     const panel =
       prevPanel ??
       vscode.window.createWebviewPanel(
@@ -109,8 +139,9 @@ export class ManifestPreviewer extends vscode.Disposable {
         vscode.ViewColumn.Two,
       );
 
+    const packageJson = await this.readJsonFile(packageJsonUri);
     const manifest = new ManifestData(
-      JSON.parse(packageJsonStr),
+      packageJson,
       packageJsonUri,
       panel.webview,
     );
@@ -123,8 +154,8 @@ export class ManifestPreviewer extends vscode.Disposable {
       extensionUri,
       'resources/template.html',
     );
-    const template = await fs.readFile(templateUri);
-    const templateStr = decoder.decode(template);
+
+    const templateStr = await this.fileAsString(templateUri);
     const finalTemplateStr = (await manifest.replace(templateStr))
       .replace('${{markdown}}', readmeStr)
       .replace('${{cssPath}}', cssPath);
@@ -135,10 +166,7 @@ export class ManifestPreviewer extends vscode.Disposable {
 
   private async getReadme(readmeUri: vscode.Uri): Promise<string | undefined> {
     try {
-      const fs = vscode.workspace.fs;
-      const readme = await fs.readFile(readmeUri);
-      const decoder = new TextDecoder();
-      const decodedStr = decoder.decode(readme);
+      const decodedStr = await this.fileAsString(readmeUri);
       const md = new MarkdownIt({ html: true, linkify: true });
       const readmeStr = md.render(decodedStr);
       return readmeStr;
