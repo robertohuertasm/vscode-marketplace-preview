@@ -1,37 +1,32 @@
-# [1.1.0](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.0.2...v1.1.0) (2022-10-25)
+# [1.2.0](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.1.0...v1.2.0) (2022-10-26)
 
+### Features
+
+* **context:** only show command when vscode package.json ([#6](https://github.com/robertohuertasm/vscode-marketplace-preview/issues/6)) ([e3182e7](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/e3182e750aaac3740be4cac901de57f16a983e12))
+
+# [1.1.0](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.0.2...v1.1.0) (2022-10-25)
 
 ### Bug Fixes
 
 * **icon:** show icon even in nested folders ([#3](https://github.com/robertohuertasm/vscode-marketplace-preview/issues/3)) ([c612e8e](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/c612e8e836a7998ce7b9a998b88b80ad46b65dce))
 
-
 ### Features
 
 * **pricing:** support for pricing tag ([#1](https://github.com/robertohuertasm/vscode-marketplace-preview/issues/1)) ([9d82aca](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/9d82aca636e626843495cfce20d0a8d99b138c4d))
 
-
-
 ## [1.0.2](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.0.1...v1.0.2) (2022-10-23)
-
 
 ### Bug Fixes
 
 * **banner:** banner color fails when ssr false ([2d964e1](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/2d964e1f34876061cb9ba0f7e3763f9132a128b0))
 
-
-
 ## [1.0.1](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.0.0...v1.0.1) (2022-10-23)
-
 
 ### Features
 
 * **preview:** preview tag support ([78060e4](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/78060e466f0d64b4893cd497bbe9c94c80cfb707))
 
-
-
 # 1.0.0 (2022-10-23)
-
 
 ### Bug Fixes
 
@@ -40,7 +35,6 @@
 * **readme:** readme uri was not working in some cases ([74633bb](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/74633bb1d1c54c7131fbe4772491ede422f88991))
 * **theme:** publisher name changes according to the theme ([0c04375](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/0c04375ea45cabfe6b3bbc5b5f4aac89aa27d4d6))
 * **tsconfig:** skipLibCheck ([aaeacf6](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/aaeacf613a3b809d933ecf86aecf8fc1d068974b))
-
 
 ### Features
 
@@ -54,6 +48,3 @@
 * **template:** create initial template ([15f9d17](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/15f9d17bfeef7d90f6a4cef6e14a032a73326d46))
 * **watch:** react to readme and package.json changes ([91c1291](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/91c1291ca97fa372bf1dcd52f5fa36a2ea2151e0))
 * **web:** add web support ([f623cc3](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/f623cc3f6eb86211be5c5c04bcd8cd0322caa004))
-
-
-
