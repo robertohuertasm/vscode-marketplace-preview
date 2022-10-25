@@ -41,7 +41,7 @@ export class ManifestPreviewer extends vscode.Disposable {
           packageJsonUri,
         );
         if (panel && !this.isWatcherActive) {
-          const packageJaonWatcher = vscode.workspace.createFileSystemWatcher(
+          const packageJsonWatcher = vscode.workspace.createFileSystemWatcher(
             packageJsonUri.fsPath,
             true,
             false,
@@ -65,12 +65,12 @@ export class ManifestPreviewer extends vscode.Disposable {
             );
           };
 
-          packageJaonWatcher.onDidChange(watcherHandler);
+          packageJsonWatcher.onDidChange(watcherHandler);
           readmeWatcher.onDidChange(watcherHandler);
 
           this.subscriptions.push(
             panel.onDidDispose(() => {
-              packageJaonWatcher.dispose();
+              packageJsonWatcher.dispose();
               readmeWatcher.dispose();
               this.isWatcherActive = false;
             }),
