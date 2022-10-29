@@ -15,7 +15,7 @@
     },
     {
       "name": "Run Web - VSCode Web Worker",
-      "type": "extensionHost",
+      "type": "pwa-extensionHost",
       "debugWebWorkerHost": true,
       "request": "launch",
       "args": ["--extensionDevelopmentPath=${workspaceFolder}", "--extensionDevelopmentKind=web"],

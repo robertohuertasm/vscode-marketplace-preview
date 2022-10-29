@@ -2,7 +2,7 @@
   "name": "vscode-marketplace-preview",
   "displayName": "Marketplace Preview",
   "description": "Preview how the manifest of your extension will look in the Visual Studio Marketplace",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "publisher": "robertohuertasm",
   "license": "MIT",
   "author": {
@@ -32,6 +32,13 @@
     "color": "#00558e",
     "theme": "dark"
   },
+  "badges": [
+    {
+      "url": "https://github.com/robertohuertasm/vscode-marketplace-preview/actions/workflows/ci.yaml/badge.svg",
+      "href": "https://github.com/robertohuertasm/vscode-marketplace-preview/actions/workflows/ci.yaml",
+      "description": "CI"
+    }
+  ],
   "extensionKind": [
     "ui",
     "workspace"
@@ -102,7 +109,7 @@
     "axios": "^1.1.3",
     "browserify-zlib": "^0.2.0",
     "https-browserify": "^1.0.0",
-    "markdown-it": "^8.4.2",
+    "markdown-it": "^13.0.1",
     "process": "^0.11.10",
     "punycode": "^2.1.1",
     "stream-browserify": "^3.0.0",
