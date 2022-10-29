@@ -1,3 +1,12 @@
+## [1.4.1](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.4.0...v1.4.1) (2022-10-29)
+
+
+### Bug Fixes
+
+* **theme:** theming for preview badge ([#10](https://github.com/robertohuertasm/vscode-marketplace-preview/issues/10)) ([7e025d0](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/7e025d0bf434dc8922cebb7d01d703dbd2dd6596))
+
+
+
 # [1.4.0](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.3.0...v1.4.0) (2022-10-29)
 
 
