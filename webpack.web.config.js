@@ -10,7 +10,7 @@ const webpack = require('webpack');
 
 /** @type WebpackConfig */
 const extensionConfig = {
-  target: 'web',
+  target: 'webworker',
   mode: 'none', // this leaves the source code as close as possible to the original (when packaging we set this to 'production')
 
   entry: './src/extension.ts', // the entry point of this extension, 📖 -> https://webpack.js.org/configuration/entry-context/
@@ -25,6 +25,7 @@ const extensionConfig = {
     // modules added here also need to be added in the .vscodeignore file
   },
   resolve: {
+    mainFields: ['browser', 'module', 'main'], // look for `browser` entry point in imported node modules
     fallback: {
       http: require.resolve('stream-http'),
       url: require.resolve('url/'),
@@ -55,6 +56,9 @@ const extensionConfig = {
     ],
   },
   devtool: 'nosources-source-map',
+  performance: {
+    hints: false,
+  },
   infrastructureLogging: {
     level: 'log', // enables logging required for problem matchers
   },
