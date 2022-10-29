@@ -80,21 +80,30 @@ export class ManifestPreviewer extends vscode.Disposable {
     );
 
     const activeEditorSubs = vscode.window.onDidChangeActiveTextEditor(
-      editor => {
-        const document = editor?.document;
-        if (!document?.fileName.endsWith('package.json')) {
-          return;
-        }
-        const isVSCodePackageJson = this.isVSCodePackageJson(document);
-        vscode.commands.executeCommand(
-          'setContext',
-          'marketplacePreview.isVSCodePackageJson',
-          isVSCodePackageJson,
-        );
-      },
+      this.checkEditorIsVscodePackageJson,
+      this,
     );
 
+    // initial check for active editor, just in case the extension is activated when a package.json file is already open.
+    this.checkEditorIsVscodePackageJson();
+
     this.subscriptions.push(previewCommandSubs, activeEditorSubs);
+  }
+
+  private checkEditorIsVscodePackageJson(editor?: vscode.TextEditor): void {
+    if (!editor) {
+      editor = vscode.window.activeTextEditor;
+    }
+    const document = editor?.document;
+    if (!document?.fileName.endsWith('package.json')) {
+      return;
+    }
+    const isVSCodePackageJson = this.isVSCodePackageJson(document);
+    vscode.commands.executeCommand(
+      'setContext',
+      'marketplacePreview.isVSCodePackageJson',
+      isVSCodePackageJson,
+    );
   }
 
   private isVSCodePackageJson(document: vscode.TextDocument): boolean {
