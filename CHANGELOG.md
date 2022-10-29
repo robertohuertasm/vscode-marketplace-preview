@@ -1,3 +1,19 @@
+# [1.3.0](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.2.0...v1.3.0) (2022-10-29)
+
+
+### Bug Fixes
+
+* **initial:** detect already opened package.json ([960dcbf](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/960dcbf32a06cb27cf63ce4d37bf142ee8475339))
+
+
+### Features
+
+* **badge:** added badge to the manifest ([712c548](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/712c548e39f50aef0abf818fc0fb1c355494c62b))
+* **demo:** new animated gif ([726a168](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/726a1684c139943dc5da524f7763d28b3fa4f7e8))
+* **sidebar:** show only active members ([364f6da](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/364f6dafd3c439a9cfb0c9056a62d392e9012866))
+
+
+
 # [1.2.0](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.1.0...v1.2.0) (2022-10-26)
 
 ### Features
