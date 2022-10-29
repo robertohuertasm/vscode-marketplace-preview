@@ -1,3 +1,17 @@
+# [1.4.0](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.3.0...v1.4.0) (2022-10-29)
+
+
+### Bug Fixes
+
+* **resources:** repository was used beyond resources ([#8](https://github.com/robertohuertasm/vscode-marketplace-preview/issues/8)) ([ae417f6](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/ae417f68b391edbcec430a09b3c37f21281a6bed))
+
+
+### Features
+
+* **badges:** support for badges ([#9](https://github.com/robertohuertasm/vscode-marketplace-preview/issues/9)) ([38eb554](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/38eb5544890cf6a28f634602e9ac9c44a7ede98c))
+
+
+
 # [1.3.0](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.2.0...v1.3.0) (2022-10-29)
 
 
