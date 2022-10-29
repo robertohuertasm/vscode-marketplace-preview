@@ -82,9 +82,10 @@ export class ManifestData {
       .replace(/\${{tags}}/g, this.getTags())
       .replace(/\${{sponsor}}/g, this.getSponsor())
       .replace(/\${{preview}}/g, this.getPreview())
-      .replace(/\${{homepage}}/g, this.getHomepage())
-      .replace(/\${{bugs}}/g, this.getBugs())
-      .replace(/\${{repository}}/g, this.getRepository())
+      .replace(/\${{repositoryResource}}/g, this.getRepositoryResource())
+      .replace(/\${{homepageResource}}/g, this.getHomepageResource())
+      .replace(/\${{bugsResource}}/g, this.getBugsResource())
+      .replace(/\${{repository}}/g, this.repository)
       .replace(/\${{nicePublisherName}}/g, nicePublisherName)
       .replace(/\${{backgroundColor}}/g, this.galleryBanner.color)
       .replace(/\${{theme}}/g, this.galleryBanner.theme)
@@ -202,7 +203,7 @@ export class ManifestData {
       .join('');
   }
 
-  private getBugs(): string {
+  private getBugsResource(): string {
     if (!this.bugs) {
       return '';
     }
@@ -210,7 +211,7 @@ export class ManifestData {
     target="_blank" rel="noreferrer noopener nofollow">Issues</a></li>`;
   }
 
-  private getRepository(): string {
+  private getRepositoryResource(): string {
     if (!this.repository) {
       return '';
     }
@@ -218,7 +219,7 @@ export class ManifestData {
     target="_blank" rel="noreferrer noopener nofollow">Repository</a></li>`;
   }
 
-  private getHomepage(): string {
+  private getHomepageResource(): string {
     if (!this.homepage) {
       return '';
     }
