@@ -82,9 +82,9 @@ export class ManifestData {
       .replace(/\${{tags}}/g, this.getTags())
       .replace(/\${{sponsor}}/g, this.getSponsor())
       .replace(/\${{preview}}/g, this.getPreview())
-      .replace(/\${{homepage}}/g, this.homepage)
-      .replace(/\${{bugs}}/g, this.bugs)
-      .replace(/\${{repository}}/g, this.repository)
+      .replace(/\${{homepage}}/g, this.getHomepage())
+      .replace(/\${{bugs}}/g, this.getBugs())
+      .replace(/\${{repository}}/g, this.getRepository())
       .replace(/\${{nicePublisherName}}/g, nicePublisherName)
       .replace(/\${{backgroundColor}}/g, this.galleryBanner.color)
       .replace(/\${{theme}}/g, this.galleryBanner.theme)
@@ -200,5 +200,29 @@ export class ManifestData {
           role="link">${tag}</a>`,
       )
       .join('');
+  }
+
+  private getBugs(): string {
+    if (!this.bugs) {
+      return '';
+    }
+    return `<li><a href="${this.bugs}"
+    target="_blank" rel="noreferrer noopener nofollow">Issues</a></li>`;
+  }
+
+  private getRepository(): string {
+    if (!this.repository) {
+      return '';
+    }
+    return `<li><a href="${this.repository}"
+    target="_blank" rel="noreferrer noopener nofollow">Repository</a></li>`;
+  }
+
+  private getHomepage(): string {
+    if (!this.homepage) {
+      return '';
+    }
+    return `<li><a href="${this.homepage}"
+    target="_blank" rel="noreferrer noopener nofollow">Homepage</a></li>`;
   }
 }
