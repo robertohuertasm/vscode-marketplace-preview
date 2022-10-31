@@ -173,14 +173,14 @@ export class ManifestData {
     if (!this.preview) {
       return '';
     }
-    return `<span class="ux-item-titleTag dark">Preview</span>`;
+    return `<span class="ux-item-titleTag ${this.galleryBanner.theme}">Preview</span>`;
   }
 
   private getSponsor(): string {
     if (!this.sponsor) {
       return '';
     }
-    return `<div><span class="divider"> | </span><a class="dark" href="${this.sponsor}" target="_blank"><span class="ux-item-sponsor-heart-icon bowtie-icon bowtie-heart-icon " style="color:#D61B8C"></span><span class="ux-sponsor-text-icon " style="color:#ffffff">Sponsor</span></a></div>`;
+    return `<div><span class="divider"> | </span><a class="${this.galleryBanner.theme}" href="${this.sponsor}" target="_blank"><span class="ux-item-sponsor-heart-icon bowtie-icon bowtie-heart-icon " style="color:#D61B8C"></span><span class="ux-sponsor-text-icon " style="color:#ffffff">Sponsor</span></a></div>`;
   }
 
   private getFirstCategory(): string {
