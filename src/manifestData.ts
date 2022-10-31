@@ -3,6 +3,8 @@ import * as vscode from 'vscode';
 import axios from 'axios';
 import { LiveExtensionInfo } from './liveExtensionInfo';
 
+type Badge = { url: string; href: string; description: string };
+
 export class ManifestData {
   public name: string;
   public displayName: string;
@@ -25,6 +27,7 @@ export class ManifestData {
   public isWeb: boolean;
   public author: { name: string; email: string };
   public pricing: string;
+  public badges: Badge[];
 
   constructor(
     data: Record<string, any>,
@@ -58,6 +61,7 @@ export class ManifestData {
       email: data.author?.email || 'roberto.huertas@outlook.com',
     };
     this.pricing = data.pricing === 'Trial' ? 'Free Trial' : 'Free';
+    this.badges = data.badges || [];
   }
 
   public async replace(template: string): Promise<string> {
@@ -85,6 +89,7 @@ export class ManifestData {
       .replace(/\${{repositoryResource}}/g, this.getRepositoryResource())
       .replace(/\${{homepageResource}}/g, this.getHomepageResource())
       .replace(/\${{bugsResource}}/g, this.getBugsResource())
+      .replace(/\${{badges}}/g, this.getBadges())
       .replace(/\${{repository}}/g, this.repository)
       .replace(/\${{nicePublisherName}}/g, nicePublisherName)
       .replace(/\${{backgroundColor}}/g, this.galleryBanner.color)
@@ -225,5 +230,21 @@ export class ManifestData {
     }
     return `<li><a href="${this.homepage}"
     target="_blank" rel="noreferrer noopener nofollow">Homepage</a></li>`;
+  }
+
+  private getBadges(): string {
+    if (!this.badges.length) {
+      return '';
+    }
+    return `<div class="ux-section-badges">
+    <ul>
+    ${this.badges
+      .map(
+        b =>
+          `<li><a class="badge" href="${b.href}" target="_blank" rel="noreferrer noopener nofollow"><img src="${b.url}" title="${b.description}" alt="${b.href}"></a></li>`,
+      )
+      .join('')}
+    </ul>
+  </div>`;
   }
 }
