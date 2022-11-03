@@ -1,11 +1,22 @@
 name: CI
 
 on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '.vscode/**'
+      - 'coverage/**'
+      - '**.md'
   pull_request:
     tags:
       - '!*'
     branches:
       - '*'
+    paths-ignore:
+      - '.vscode/**'
+      - 'coverage/**'
+      - '**.md'
   workflow_dispatch:
 
 jobs:

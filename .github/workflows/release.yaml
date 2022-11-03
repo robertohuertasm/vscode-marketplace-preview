@@ -24,24 +24,12 @@ jobs:
       - name: Installing dependencies
         run: npm ci
 
-      # - name: Publish to Visual Studio Marketplace
-      #   run: npx vsce@2.9.2 publish -p ${{ secrets.VSCE_TOKEN }}
-
       - name: Package Extension
         id: packageExtension
         uses: HaaLeo/publish-vscode-extension@v1
         with:
           pat: stub
           dryRun: true
-
-      # - name: Upload Extension Package as Artifact
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: ${{ matrix.os }}
-      #     path: ${{ steps.packageExtension.outputs.vsixPath }}
-
-      # - name: Create the .vsix file
-      #   run: vsce package
 
       - name: Upload VSIX file to GitHub Releases
         uses: svenstaro/upload-release-action@v2
