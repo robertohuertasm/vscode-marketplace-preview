@@ -8,10 +8,10 @@
 <h3>Easily preview how your <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a> extension will look like in the marketplace</h3>
 <br/>
 
-[![Version](https://vsmarketplacebadge.apphb.com/version-short/robertohuertasm.vscode-marketplace-preview.svg?style=for-the-badge&colorA=252525&colorB=0079CC)](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-marketplace-preview)
-[![Installs](https://vsmarketplacebadge.apphb.com/installs-short/robertohuertasm.vscode-marketplace-preview.svg?style=for-the-badge&colorA=252525&colorB=0079CC)](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-marketplace-preview)
-[![Downloads](https://vsmarketplacebadge.apphb.com/downloads-short/robertohuertasm.vscode-marketplace-preview.svg?style=for-the-badge&colorA=252525&colorB=0079CC)](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-marketplace-preview)
-[![Ratings](https://vsmarketplacebadge.apphb.com/rating/robertohuertasm.vscode-marketplace-preview.svg?style=for-the-badge&colorA=252525&colorB=0079CC)](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-marketplace-preview)
+[![Version](https://vsmarketplacebadges.dev/version-short/robertohuertasm.vscode-marketplace-preview.svg?style=for-the-badge&colorA=252525&colorB=0079CC)](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-marketplace-preview)
+[![Installs](https://vsmarketplacebadges.dev/installs-short/robertohuertasm.vscode-marketplace-preview.svg?style=for-the-badge&colorA=252525&colorB=0079CC)](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-marketplace-preview)
+[![Downloads](https://vsmarketplacebadges.dev/downloads-short/robertohuertasm.vscode-marketplace-preview.svg?style=for-the-badge&colorA=252525&colorB=0079CC)](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-marketplace-preview)
+[![Ratings](https://vsmarketplacebadges.dev/rating/robertohuertasm.vscode-marketplace-preview.svg?style=for-the-badge&colorA=252525&colorB=0079CC)](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-marketplace-preview)
 
 <br/>
 
