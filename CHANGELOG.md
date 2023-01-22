@@ -1,3 +1,12 @@
+# [1.5.0](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.4.1...v1.5.0) (2023-01-22)
+
+
+### Bug Fixes
+
+* **readme:** fix badges ([77c2611](https://github.com/robertohuertasm/vscode-marketplace-preview/commit/77c2611f400f6145e1a18a1657de3066fbfce2c5))
+
+
+
 ## [1.4.1](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.4.0...v1.4.1) (2022-10-29)
 
 
