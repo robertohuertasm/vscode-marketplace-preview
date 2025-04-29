@@ -1,3 +1,7 @@
+## [1.5.2](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.5.1...v1.5.2) (2025-04-29)
+
+
+
 # [1.5.0](https://github.com/robertohuertasm/vscode-marketplace-preview/compare/v1.4.1...v1.5.0) (2023-01-22)
 
 
